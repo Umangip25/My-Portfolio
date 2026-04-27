@@ -1,4 +1,5 @@
 import data from '../data/data.json';
+import SectionBadge from './SectionBadge';
 
 export default function Projects() {
   const { projects } = data;
@@ -15,26 +16,7 @@ export default function Projects() {
       }}
     >
       {/* Section Label */}
-      <p style={{
-        fontSize: '0.75rem',
-        letterSpacing: '0.2em',
-        textTransform: 'uppercase',
-        color: '#38bdf8',
-        marginBottom: '16px',
-      }}>
-        My Work
-      </p>
-
-      {/* Heading */}
-      <h2 style={{
-        fontSize: 'clamp(1.8rem, 4vw, 3rem)',
-        fontWeight: 700,
-        color: '#f1f5f9',
-        marginBottom: '64px',
-        lineHeight: 1.2,
-      }}>
-        Projects
-      </h2>
+      <SectionBadge label="Projects" />
 
       {/* Featured Project */}
       {featured.map((project) => (

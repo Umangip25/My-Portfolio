@@ -1,4 +1,5 @@
 import data from '../data/data.json';
+import SectionBadge from './SectionBadge';
 
 export default function Experience() {
   const { experience } = data;
@@ -13,26 +14,7 @@ export default function Experience() {
       }}
     >
       {/* Section Label */}
-      <p style={{
-        fontSize: '0.75rem',
-        letterSpacing: '0.2em',
-        textTransform: 'uppercase',
-        color: '#38bdf8',
-        marginBottom: '16px',
-      }}>
-        Work History
-      </p>
-
-      {/* Heading */}
-      <h2 style={{
-        fontSize: 'clamp(1.8rem, 4vw, 3rem)',
-        fontWeight: 700,
-        color: '#f1f5f9',
-        marginBottom: '64px',
-        lineHeight: 1.2,
-      }}>
-        Experience
-      </h2>
+      <SectionBadge label="Experience" />
 
       {/* Timeline */}
       <div style={{ maxWidth: '800px', position: 'relative' }}>

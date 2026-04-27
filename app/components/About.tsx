@@ -1,30 +1,20 @@
 import data from '../data/data.json';
+import SectionBadge from './SectionBadge';
 
 export default function About() {
-  const { name, bio, location, openToWork } = data.personal;
+  const { bio, location, openToWork } = data.personal;
 
   return (
-    <section
-      id="about"
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        padding: '80px 48px',
-        background: '#080b10',
-      }}
-    >
+    <section id="about" style={{
+      minHeight: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      padding: '80px 48px',
+      background: '#080b10',
+    }}>
       <div style={{ maxWidth: '760px' }}>
 
-        <p style={{
-          fontSize: '0.75rem',
-          letterSpacing: '0.2em',
-          textTransform: 'uppercase',
-          color: '#38bdf8',
-          marginBottom: '16px',
-        }}>
-          About Me
-        </p>
+        <SectionBadge label="About Me" />
 
         <h2 style={{
           fontSize: 'clamp(1.8rem, 4vw, 3rem)',
@@ -76,7 +66,6 @@ export default function About() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
