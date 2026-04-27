@@ -227,18 +227,91 @@
     }
   ],
   "certifications": [
-    { "title": "Hands-On AI: Build an AI Chatbot with GPT-4o and Next.js", "issuer": "LinkedIn", "year": "2026" },
-    { "title": "Integrating Generative AI into JavaScript Web Projects", "issuer": "LinkedIn", "year": "2026" },
-    { "title": "What is GenAI", "issuer": "LinkedIn", "year": "2026" },
-    { "title": "CSS Certificate", "issuer": "HackerRank", "year": "2026" },
-    { "title": "JavaScript (Intermediate) Certificate", "issuer": "HackerRank", "year": "2026" },
-    { "title": "Software Engineer Certificate", "issuer": "HackerRank", "year": "2026" },
-    { "title": "REST API Certificate", "issuer": "HackerRank", "year": "2026" },
-    { "title": "React JS Certificate", "issuer": "HackerRank", "year": "2026" },
-    { "title": "JavaScript Specialist Certification", "issuer": "HackerRank", "year": "2026" },
-    { "title": "Frontend Developer (React) Certificate", "issuer": "HackerRank", "year": "2026" },
-    { "title": "Front End Web Development", "issuer": "Johns Hopkins University (Coursera)", "year": "2021" }
-  ],
+  {
+    "title": "Hands-On AI: Build an AI Chatbot with GPT-4o and Next.js",
+    "issuer": "LinkedIn",
+    "year": "2026",
+    "description": "Covers building a production-ready AI chat app with Next.js and OpenAI GPT models, including conversation threading, message persistence, and real-time streaming responses.",
+    "link": "https://www.linkedin.com/learning/certificates/47713723f7d6b4b1ebd5a383bd703ed3765a2db712513a6c9d5fa92e3507bdc1"
+  },
+  {
+    "title": "Integrating Generative AI into JavaScript Web Projects",
+    "issuer": "LinkedIn",
+    "year": "2026",
+    "description": "Teaches how to integrate OpenAI APIs into JavaScript web apps, covering chat completions, function calling, and building AI-powered virtual assistants.",
+    "link": "https://www.linkedin.com/learning/certificates/906673795f15be06080a45421f7a7c10bdb4f10bd0a07b5408ef5b5dae9bd03b"
+  },
+  {
+    "title": "What is GenAI",
+    "issuer": "LinkedIn",
+    "year": "2026",
+    "description": "An introductory course explaining what Generative AI is, how it differs from traditional machine learning, and how it creates new content like text, images, and code.",
+    "link": "https://www.linkedin.com/learning/certificates/1d21c47aac8e127cb4feb6715be4db8529dc93a2fd0c17b178681ce79c017361"
+  },
+  {
+    "title": "CSS Certificate",
+    "issuer": "HackerRank",
+    "year": "2026",
+    "description": "Validates proficiency in CSS fundamentals including cascading and inheritance, text styling, layout techniques, and the box model.",
+    "link": "https://www.hackerrank.com/certificates/0cffbb098760"
+  },
+  {
+    "title": "JavaScript (Intermediate) Certificate",
+    "issuer": "HackerRank",
+    "year": "2026",
+    "description": "Assesses knowledge of advanced JavaScript concepts including design patterns, memory management, concurrency models, and event loops.",
+    "link": "https://www.hackerrank.com/certificates/a4db5436d7ed"
+  },
+  {
+    "title": "Software Engineer Certificate",
+    "issuer": "HackerRank",
+    "year": "2026",
+    "description": "A role-based certification validating proficiency in problem-solving, SQL, and REST APIs — core skills expected of software engineers.",
+    "link": "https://www.hackerrank.com/certificates/4f803d47206b"
+  },
+  {
+    "title": "REST API Certificate",
+    "issuer": "HackerRank",
+    "year": "2026",
+    "description": "Covers retrieving and processing data from APIs using parameters and pagination, validating hands-on REST API integration skills.",
+    "link": "https://www.hackerrank.com/certificates/b520824f18d2"
+  },
+  {
+    "title": "React JS Certificate",
+    "issuer": "HackerRank",
+    "year": "2026",
+    "description": "Validates React skills including basic routing, rendering elements, state management, event handling, ES6 syntax, and form validation.",
+    "link": "https://www.hackerrank.com/certificates/ba39cd8adba7"
+  },
+  {
+    "title": "JavaScript Specialist Certification",
+    "issuer": "HackerRank",
+    "year": "2026",
+    "description": "An advanced JavaScript certification covering functions, hoisting, scope, inheritance, events, error handling, and core language concepts.",
+    "link": "https://www.hackerrank.com/certificates/dfa4ec9a7d4e"
+  },
+  {
+    "title": "Frontend Developer (React) Certificate",
+    "issuer": "HackerRank",
+    "year": "2026",
+    "description": "A role-based certification covering React, JavaScript, and CSS — validating the complete skill set expected of a frontend developer.",
+    "link": "https://www.hackerrank.com/certificates/047da75efe55"
+  },
+  {
+    "title": "Front End Web Development",
+    "issuer": "Johns Hopkins University (Coursera)",
+    "year": "2021",
+    "description": "Covers building responsive, interactive websites using HTML5, CSS3, and JavaScript, including responsive design, Ajax, and DOM manipulation.",
+    "link": "https://coursera.org/share/1725954c3d40eb0ba6e3932fab88cf28"
+  },
+  {
+    "title": "Using Python to Access Web Data",
+    "issuer": " University of Michigan (Coursera)",
+    "year": "2020",
+    "description": "Focuses on accessing and processing web data using Python, including API integration, JSON/XML parsing, and web scraping techniques.",
+    "link": "https://coursera.org/share/548ead6309cf18d1e0a94be214482413"
+  }
+],
   "recommendations": [
     {
       "name": "Skandh Gupta",
