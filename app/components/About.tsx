@@ -9,8 +9,8 @@ export default function About() {
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
-      padding: '80px 48px',
       background: '#080b10',
+      padding: '80px 48px 80px 80px',
     }}>
       <div style={{ maxWidth: '760px' }}>
 

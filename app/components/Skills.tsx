@@ -21,7 +21,7 @@ export default function Skills() {
       id="skills"
       style={{
         minHeight: '100vh',
-        padding: '100px 48px',
+        padding: '100px 48px 100px 80px',
         background: '#080b10',
       }}
     >

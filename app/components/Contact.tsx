@@ -12,7 +12,7 @@ export default function Contact() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: '100px 48px',
+        padding: '100px 48px 100px 80px',
         background: '#080b10',
       }}
     >

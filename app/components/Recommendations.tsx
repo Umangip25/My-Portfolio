@@ -5,7 +5,7 @@ export default function Recommendations() {
   const { personal } = data;
 
   return (
-    <section id="recommendations" style={{ padding: '100px 48px', background: '#080b10' }}>
+    <section id="recommendations" style={{ padding: '100px 48px 100px 80px', background: '#080b10' }}>
       <div style={{ display: 'inline-block' }}>
         <SectionBadge label="Recommendations" />
       </div>

@@ -39,7 +39,7 @@ export default function Certifications() {
   };
 
   return (
-    <section id="certifications" style={{ padding: '100px 0 100px 48px', background: '#080b10' }}>
+    <section id="certifications" style={{ padding: '100px 0 100px 80px', background: '#080b10' }}>
       <style>{`
         .cert-scroll::-webkit-scrollbar { display: none; }
         .cert-scroll { -ms-overflow-style: none; scrollbar-width: none; }
