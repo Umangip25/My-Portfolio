@@ -4,7 +4,7 @@ export default function Hero() {
   const { name, title, tagline, email } = data.personal;
 
   return (
-    <section style={{
+    <section id="hero" style={{
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
