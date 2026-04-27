@@ -1,0 +1,258 @@
+{
+  "personal": {
+    "name": "Umangi Prajapati",
+    "title": "Frontend Software Engineer",
+    "tagline": "I build frontend experiences that are fast, accessible, and scale well.",
+    "bio": "Frontend Software Engineer with 4+ years of experience building scalable, high-performance web applications using React.js, Next.js, and TypeScript. Proven track record of improving performance by 15–30% through SSR, lazy loading, and code splitting. Hands-on experience integrating AI/LLM APIs into production applications. Passionate about building seamless, responsive user experiences from Figma to deployment.",
+    "location": "San Jose, California, United States",
+    "email": "umangip96@gmail.com",
+    "phone": "+1 7605717758",
+    "github": "https://github.com/Umangip25",
+    "linkedin": "https://www.linkedin.com/in/umangiprajapati/",
+    "portfolio": "https://umangi-prajapati-yvxedph.gamma.site/",
+    "openToWork": true,
+    "pronouns": "She/Her"
+  },
+  "experience": [
+    {
+      "id": 1,
+      "company": "Optum",
+      "role": "Software Developer",
+      "type": "Contract",
+      "duration": "May 2023 – Present",
+      "location": "San Jose, CA · Remote",
+      "highlights": [
+        "Led frontend development for HR Admin Experience and Provider Search (PSX-LAWW) using React, Next.js, Tailwind CSS, and AEM Cloud",
+        "Improved page load times by 15% via SSR, lazy loading, caching, and code splitting; boosted user engagement by 30%",
+        "Integrated RESTful and GraphQL APIs for dynamic state management across patient-facing and admin modules",
+        "Migrated legacy UI to AEM Cloud, reducing CMS update cycles by 25% and technical debt by 20%",
+        "Introduced Playwright, Jest, and Enzyme pipelines increasing test coverage by 60% and reducing production bugs by 40%",
+        "Ensured WCAG accessibility compliance and mentored junior developers, accelerating onboarding by 50%"
+      ],
+      "skills": ["React", "Next.js", "TypeScript", "Tailwind CSS", "AEM Cloud", "GraphQL", "Playwright", "Jest"]
+    },
+    {
+      "id": 2,
+      "company": "Bank of America",
+      "role": "Software Developer",
+      "type": "Contract",
+      "duration": "Sep 2022 – May 2023",
+      "location": "San Jose, CA · Remote",
+      "highlights": [
+        "Developed enterprise banking web apps using React.js, JavaScript, HTML5, CSS3, and Redux",
+        "Built 10+ reusable UI components reducing development time by 20%",
+        "Integrated REST APIs with microservices teams ensuring WCAG accessibility compliance",
+        "Delivered features in Agile sprints using Jira/Rally with CI/CD via Git and Jenkins"
+      ],
+      "skills": ["React.js", "Redux", "REST APIs", "JavaScript", "Jenkins", "CI/CD"]
+    },
+    {
+      "id": 3,
+      "company": "Idexcel",
+      "role": "Junior Full Stack Developer",
+      "type": "Full-time",
+      "duration": "Feb 2022 – May 2022",
+      "location": "Herndon, VA",
+      "highlights": [
+        "Built responsive SPAs using React.js and Tailwind CSS, improving UI responsiveness by 20%",
+        "Implemented Context API for scalable state management",
+        "Wrote unit tests using Jest and Enzyme, improving code coverage and reliability"
+      ],
+      "skills": ["React.js", "Tailwind CSS", "Context API", "Jest", "Enzyme"]
+    },
+    {
+      "id": 4,
+      "company": "Baanyan Software Services",
+      "role": "UI React Developer Trainee",
+      "type": "Full-time",
+      "duration": "Jul 2021 – Feb 2022",
+      "location": "Edison, NJ · Remote",
+      "highlights": [
+        "Built reusable React components following DRY principles, reducing development time by 20%",
+        "Translated wireframes into functional UIs using JavaScript ES6+, Node.js, and Webpack",
+        "Delivered 5 project modules on schedule in Agile teams"
+      ],
+      "skills": ["React.js", "JavaScript ES6+", "Node.js", "Webpack", "Agile"]
+    },
+    {
+      "id": 5,
+      "company": "i3 Infotech",
+      "role": "Web Developer Intern",
+      "type": "Internship",
+      "duration": "Aug 2017 – May 2018",
+      "location": "Surat, Gujarat, India · On-site",
+      "highlights": [
+        "Built responsive interfaces using HTML, CSS, JavaScript, and React following mobile-first principles",
+        "Implemented reusable React components, forms, routing, and basic animations"
+      ],
+      "skills": ["HTML", "CSS", "JavaScript", "React"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Auriq AI — AI Chatbot",
+      "description": "Full-stack AI chatbot with real-time streaming responses using OpenAI GPT-4o-mini and Next.js App Router. Features intent-based routing to specialized agents for weather, math, coding, and jokes, plus multi-session chat management with IndexedDB persistence.",
+      "highlights": [
+        "Real-time streaming responses with OpenAI GPT-4o-mini",
+        "Multi-chat system with persistent history via IndexedDB",
+        "Smart intent detection for weather, math, coding, jokes, and advice",
+        "Mobile-responsive UI with light/dark theme toggle",
+        "KaTeX math rendering and hydration-safe SSR components"
+      ],
+      "tech": ["Next.js", "TypeScript", "OpenAI API", "Zustand", "Tailwind CSS", "IndexedDB", "Dexie.js"],
+      "live": "https://ai-chat-bot-theta-rust.vercel.app/",
+      "github": "https://github.com/Umangip25",
+      "featured": true,
+      "year": "2026"
+    },
+    {
+      "id": 2,
+      "title": "User Behavior Prediction — Web Log Mining",
+      "description": "A predictive analytics application built to forecast future item sales based on historical data, page hit reports, and exit page tracking.",
+      "highlights": [
+        "Predicts future sales of items sold in previous years",
+        "Page hit and exit page report modules",
+        "Calculates user interaction patterns and session behavior"
+      ],
+      "tech": ["C#", "SQL Server", "Visual Studio", "Node.js"],
+      "live": null,
+      "github": "https://github.com/Umangip25",
+      "featured": false,
+      "year": "2021"
+    },
+    {
+      "id": 3,
+      "title": "Dogmates — Flutter App",
+      "description": "A mobile application for dog owners covering breed information, event listings, veterinary clinic locations, accessories shopping, and grooming session locators.",
+      "highlights": [
+        "Dog breed information and event listings",
+        "Vet clinic location integration",
+        "Grooming session locator for male and female dogs",
+        "Login and registration flow with 3 main modules"
+      ],
+      "tech": ["Flutter", "Dart", "XML", "Android Studio"],
+      "live": null,
+      "github": "https://github.com/Umangip25",
+      "featured": false,
+      "year": "2020"
+    },
+    {
+      "id": 4,
+      "title": "North County Climate Change Alliance — Website",
+      "description": "A nonprofit event-management website built for the North County Climate Change Alliance.",
+      "highlights": [
+        "Single-page application built with ReactJS",
+        "Dynamic event management modules updated weekly",
+        "Bootstrap and CSS Media Queries for full responsiveness",
+        "PHP + MySQL backend with XAMPP server"
+      ],
+      "tech": ["React.js", "Bootstrap", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "live": null,
+      "github": "https://github.com/Umangip25",
+      "featured": false,
+      "year": "2019"
+    },
+    {
+      "id": 5,
+      "title": "Cloud Marketing with Image Processing",
+      "description": "An online shopping platform using image processing to intelligently filter and surface products.",
+      "highlights": [
+        "Image upload or keyword search with processing-based filtering",
+        "Displays relevant items based on visual matching",
+        "ReactJS SPA with PHP/MySQL backend"
+      ],
+      "tech": ["React.js", "Bootstrap", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "live": null,
+      "github": "https://github.com/Umangip25",
+      "featured": false,
+      "year": "2018"
+    },
+    {
+      "id": 6,
+      "title": "Face Recognition & Password Authentication",
+      "description": "An Android app providing biometric security using facial recognition as a login password.",
+      "highlights": [
+        "Face stored as password during registration",
+        "Biometric login for returning users",
+        "Android native implementation"
+      ],
+      "tech": ["Android Studio", "Android", "XML"],
+      "live": null,
+      "github": "https://github.com/Umangip25",
+      "featured": false,
+      "year": "2017"
+    },
+    {
+      "id": 7,
+      "title": "Online Voting System",
+      "description": "A digital voting application allowing citizens to vote for their preferred political party from anywhere.",
+      "highlights": [
+        "Remote voting from any device",
+        "Secure voter registration and authentication",
+        "Basic but accessible UI built with C# and Visual Studio"
+      ],
+      "tech": ["C#", "Visual Studio"],
+      "live": null,
+      "github": "https://github.com/Umangip25",
+      "featured": false,
+      "year": "2015"
+    }
+  ],
+  "skills": {
+    "languages": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "C#", "Dart"],
+    "frameworks": ["React.js", "Next.js", "Redux", "Context API", "Zustand", "Node.js", "Flutter"],
+    "styling": ["Tailwind CSS", "Styled Components", "Responsive Design", "Bootstrap"],
+    "testing": ["Jest", "Enzyme", "Playwright"],
+    "tools": ["Git", "NPM", "Webpack", "Babel", "Jenkins", "Jira", "Figma", "Vercel"],
+    "cms": ["Adobe Experience Manager (AEM Cloud)"],
+    "apis": ["REST APIs", "GraphQL", "OpenAI API"],
+    "performance": ["SSR", "Lazy Loading", "Code Splitting", "Caching"],
+    "other": ["Web Accessibility (WCAG)", "CI/CD", "Agile/Scrum", "XSS Prevention", "DOM Manipulation", "IndexedDB (Dexie.js)"]
+  },
+  "education": [
+    {
+      "degree": "Master's in Computer Science",
+      "institution": "California State University San Marcos",
+      "location": "USA",
+      "gpa": "3.4/4.0",
+      "year": "May 2021"
+    },
+    {
+      "degree": "Bachelor's in Computer Science & Engineering",
+      "institution": "Gujarat Technological University",
+      "location": "Gujarat, India",
+      "gpa": "7.76/10",
+      "year": "June 2018"
+    }
+  ],
+  "certifications": [
+    { "title": "Hands-On AI: Build an AI Chatbot with GPT-4o and Next.js", "issuer": "LinkedIn", "year": "2026" },
+    { "title": "Integrating Generative AI into JavaScript Web Projects", "issuer": "LinkedIn", "year": "2026" },
+    { "title": "What is GenAI", "issuer": "LinkedIn", "year": "2026" },
+    { "title": "CSS Certificate", "issuer": "HackerRank", "year": "2026" },
+    { "title": "JavaScript (Intermediate) Certificate", "issuer": "HackerRank", "year": "2026" },
+    { "title": "Software Engineer Certificate", "issuer": "HackerRank", "year": "2026" },
+    { "title": "REST API Certificate", "issuer": "HackerRank", "year": "2026" },
+    { "title": "React JS Certificate", "issuer": "HackerRank", "year": "2026" },
+    { "title": "JavaScript Specialist Certification", "issuer": "HackerRank", "year": "2026" },
+    { "title": "Frontend Developer (React) Certificate", "issuer": "HackerRank", "year": "2026" },
+    { "title": "Front End Web Development", "issuer": "Johns Hopkins University (Coursera)", "year": "2021" }
+  ],
+  "recommendations": [
+    {
+      "name": "Skandh Gupta",
+      "title": "Software Engineer @ American Express | Java | Spring Boot | Microservices",
+      "relationship": "Managed Umangi directly",
+      "date": "March 2026",
+      "text": "Umangi is an exceptional professional who consistently demonstrated a strong learning mindset and eagerness to stay up-to-date with the latest technologies. Her expertise in frontend development, particularly with Next.js, was evident in the quality and efficiency of her work. What stood out most was her clarity in understanding requirements and proactive communication. She brings a high level of ownership, accountability, and professionalism, and is a dependable team member who adds value through both technical contributions and a collaborative approach."
+    },
+    {
+      "name": "Monte Nichols",
+      "title": "Senior Software Engineer at Buildit",
+      "relationship": "Managed Umangi directly",
+      "date": "March 2026",
+      "text": "Umangi is a developer that consistently delivers production-ready software on schedule, with thorough testing and a genuine focus on the end user experience. Across multiple releases and shifting team dynamics, she proved reliable under pressure, picking up new technologies without losing momentum on her deliverables. Any team that brings her on will get someone who writes solid code, meets deadlines, and cares about quality."
+    }
+  ]
+}

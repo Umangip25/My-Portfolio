@@ -1,4 +1,8 @@
+import data from '../data/data.json';
+
 export default function Hero() {
+  const { name, title, tagline, email } = data.personal;
+
   return (
     <section style={{
       minHeight: '100vh',
@@ -8,7 +12,6 @@ export default function Hero() {
       background: '#080b10',
     }}>
       <div>
-        {/* Greeting */}
         <p style={{
           fontSize: '0.75rem',
           letterSpacing: '0.2em',
@@ -19,7 +22,6 @@ export default function Hero() {
           Hi, I'm
         </p>
 
-        {/* Name */}
         <h1 style={{
           fontSize: 'clamp(2.5rem, 6vw, 5rem)',
           fontWeight: 700,
@@ -27,20 +29,18 @@ export default function Hero() {
           lineHeight: 1.1,
           marginBottom: '12px',
         }}>
-          Umangi Prajapati
+          {name}
         </h1>
 
-        {/* Title */}
         <h2 style={{
           fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
           fontWeight: 400,
           color: '#38bdf8',
           marginBottom: '24px',
         }}>
-          Frontend Software Engineer
+          {title}
         </h2>
 
-        {/* Tagline */}
         <p style={{
           fontSize: '1rem',
           color: '#94a3b8',
@@ -48,10 +48,9 @@ export default function Hero() {
           lineHeight: 1.7,
           marginBottom: '40px',
         }}>
-          I build frontend experiences that are fast, accessible, and scale well.
+          {tagline}
         </p>
 
-        {/* Buttons */}
         <div style={{ display: 'flex', gap: '16px' }}>
           <a href="#projects" style={{
             padding: '12px 28px',
@@ -66,7 +65,7 @@ export default function Hero() {
           }}>
             View Projects
           </a>
-          <a href="mailto:umangip96@gmail.com" style={{
+          <a href={`mailto:${email}`} style={{
             padding: '12px 28px',
             border: '1px solid rgba(56,189,248,0.4)',
             color: '#38bdf8',
