@@ -16,7 +16,9 @@ export default function Contact() {
         background: '#080b10',
       }}
     >
-      <SectionBadge label="Contact" />
+      <div style={{ display: 'inline-block' }}>
+        <SectionBadge label="Contact" />
+      </div>
 
       <h2 style={{
         fontSize: 'clamp(1.5rem, 4vw, 2.8rem)',
