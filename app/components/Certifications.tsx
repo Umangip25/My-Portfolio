@@ -7,8 +7,6 @@ import SectionBadge from './SectionBadge';
 export default function Certifications() {
   const { certifications } = data;
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  // Mouse drag to scroll
   const isDown = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
@@ -19,17 +17,14 @@ export default function Certifications() {
     scrollLeft.current = scrollRef.current?.scrollLeft || 0;
     if (scrollRef.current) scrollRef.current.style.cursor = 'grabbing';
   };
-
   const onMouseLeave = () => {
     isDown.current = false;
     if (scrollRef.current) scrollRef.current.style.cursor = 'grab';
   };
-
   const onMouseUp = () => {
     isDown.current = false;
     if (scrollRef.current) scrollRef.current.style.cursor = 'grab';
   };
-
   const onMouseMove = (e: React.MouseEvent) => {
     if (!isDown.current) return;
     e.preventDefault();
@@ -39,83 +34,69 @@ export default function Certifications() {
   };
 
   return (
-    <section id="certifications" style={{ padding: '100px 0 100px 80px', background: '#080b10' }}>
+    <section
+      id="certifications"
+      className="py-20 md:py-24 pl-6 md:pl-20"
+      style={{ background: 'var(--bg)' }}
+    >
       <style>{`
         .cert-scroll::-webkit-scrollbar { display: none; }
         .cert-scroll { -ms-overflow-style: none; scrollbar-width: none; }
         .cert-card { transition: border-color 0.2s, transform 0.2s; }
-        .cert-card:hover { border-color: rgba(56,189,248,0.4) !important; transform: translateY(-4px); }
-        .cert-link:hover { background: rgba(56,189,248,0.1) !important; }
+        .cert-card:hover { border-color: var(--accent-border) !important; transform: translateY(-4px); }
+        .cert-link:hover { background: var(--accent-dim) !important; }
       `}</style>
 
-      <div style={{ display: 'inline-block', paddingRight: '48px' }}>
+      <div className="inline-block pr-6 md:pr-12">
         <SectionBadge label="Certifications" />
       </div>
 
-      {/* Scroll hint */}
-      <p style={{
-        fontSize: '0.7rem',
-        color: '#334155',
-        letterSpacing: '0.1em',
-        textTransform: 'uppercase',
-        marginBottom: '24px',
-        paddingRight: '48px',
-      }}>
+      <p className="label-uppercase text-[0.65rem] mb-6 pr-6 md:pr-12"
+        style={{ color: 'var(--text-faint)' }}>
         ← Drag to scroll →
       </p>
 
       {/* Scrollable track */}
       <div
         ref={scrollRef}
-        className="cert-scroll"
+        className="cert-scroll flex gap-5 overflow-x-scroll pb-4 pr-6 md:pr-12 select-none"
+        style={{ cursor: 'grab', scrollBehavior: 'smooth' }}
         onMouseDown={onMouseDown}
         onMouseLeave={onMouseLeave}
         onMouseUp={onMouseUp}
         onMouseMove={onMouseMove}
-        style={{
-          display: 'flex',
-          gap: '24px',
-          overflowX: 'scroll',
-          scrollBehavior: 'smooth',
-          cursor: 'grab',
-          paddingBottom: '16px',
-          paddingRight: '48px',
-          userSelect: 'none',
-        }}
       >
         {certifications.map((cert, i) => (
           <div
             key={i}
-            className="cert-card"
+            className="cert-card flex flex-col flex-shrink-0 rounded-sm p-5 md:p-7"
             style={{
-              minWidth: '300px',
-              maxWidth: '300px',
-              background: 'rgba(255,255,255,0.02)',
-              border: '1px solid #1e293b',
-              borderRadius: '4px',
-              padding: '28px',
-              display: 'flex',
-              flexDirection: 'column',
-              flexShrink: 0,
+              minWidth: '260px',
+              maxWidth: '260px',
+              background: 'var(--bg-card)',
+              border: '1px solid var(--border)',
             }}
           >
             {/* Issuer + Year */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
-              <p style={{ fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#38bdf8', margin: 0 }}>
+            <div className="flex justify-between items-start mb-3">
+              <p className="label-uppercase text-[0.6rem] md:text-[0.65rem]"
+                style={{ color: 'var(--accent)' }}>
                 {cert.issuer}
               </p>
-              <span style={{ fontSize: '0.65rem', color: '#475569', border: '1px solid #1e293b', padding: '2px 8px', borderRadius: '2px' }}>
+              <span className="tag-muted text-[0.6rem] ml-2 shrink-0">
                 {cert.year}
               </span>
             </div>
 
             {/* Title */}
-            <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: '#f1f5f9', lineHeight: 1.5, marginBottom: '10px' }}>
+            <h3 className="font-semibold leading-snug mb-2 text-sm md:text-base"
+              style={{ color: 'var(--text-primary)' }}>
               {cert.title}
             </h3>
 
             {/* Description */}
-            <p style={{ fontSize: '0.8rem', color: '#64748b', lineHeight: 1.6, marginBottom: '20px', flex: 1 }}>
+            <p className="leading-relaxed mb-5 flex-1 text-xs md:text-sm"
+              style={{ color: '#64748b' }}>
               {cert.description}
             </p>
 
@@ -124,32 +105,18 @@ export default function Certifications() {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="cert-link"
-              style={{
-                display: 'inline-block',
-                alignSelf: 'flex-start',
-                fontSize: '0.7rem',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: '#38bdf8',
-                border: '1px solid rgba(56,189,248,0.3)',
-                padding: '8px 16px',
-                borderRadius: '2px',
-                textDecoration: 'none',
-                transition: 'background 0.2s',
-              }}
+              className="cert-link btn-outline self-start text-[0.65rem] md:text-[0.7rem] px-3 py-2"
             >
               View Certificate ↗
             </a>
           </div>
         ))}
-          </div>
+      </div>
 
-          {/* Count of Certifications */}
-          <p style={{ fontSize: '0.65rem', color: '#334155', letterSpacing: '0.1em', marginTop: '8px' }}>
-              {certifications.length} certifications
-          </p>
-
-      </section>
+      <p className="text-[0.65rem] mt-3 pr-6 md:pr-12"
+        style={{ color: 'var(--text-faint)', letterSpacing: '0.1em' }}>
+        {certifications.length} certifications
+      </p>
+    </section>
   );
 }

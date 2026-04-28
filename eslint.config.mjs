@@ -13,7 +13,9 @@ const eslintConfig = defineConfig([
   ]),
   {
     rules: {
-      'react/no-unescaped-entities': 'off'
+      'react/no-unescaped-entities': 'off',
+      '@typescript-eslint/no-require-imports': 'off',
+      'tailwindcss/no-arbitrary-value': 'off',
     }
   }
 ]);

@@ -4,101 +4,86 @@ import { useEffect, useState } from 'react';
 import data from '../data/data.json';
 import { useActiveSection } from '../hooks/useActiveSection';
 
+const navLinks = [
+  { label: 'About', id: 'about' },
+  { label: 'Experience', id: 'experience' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Contact', id: 'contact' },
+];
+
 export default function Hero() {
   const { name, title, tagline, email, location, openToWork } = data.personal;
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
   const activeSection = useActiveSection();
 
   useEffect(() => {
-  let rafId: number;
+    let rafId: number;
+    const handleScroll = () => {
+      rafId = requestAnimationFrame(() => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        setScrollProgress(progress);
+      });
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
 
-  const handleScroll = () => {
-    rafId = requestAnimationFrame(() => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      setScrollProgress(progress);
-    });
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setMenuOpen(false);
   };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-    cancelAnimationFrame(rafId);
-  };
-}, []);
+  const stats = [
+    { value: '4+', label: 'Years of Experience' },
+    { value: location.split(',')[1]?.trim() || 'San Jose', label: location.split(',')[0] },
+    { value: openToWork ? '✅' : '❌', label: 'Open to Work' },
+  ];
 
   return (
-    <section id="hero" style={{
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      background: '#080b10',
-      position: 'relative',
-      overflow: 'hidden',
-      padding: '0 80px 0 90px',
-    }}>
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center overflow-hidden px-6 md:pl-[90px] md:pr-[80px]"
+      style={{ background: 'var(--bg)' }}
+    >
 
-      {/* ── Vertical Navbar ── */}
-      <nav style={{
-        position: 'fixed',
-        left: 0,
-        top: 0,
-        bottom: 0,
-        width: '60px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        zIndex: 100,
-        gap: '40px',
-        borderRight: '1px solid rgba(56,189,248,0.08)',
-        background: 'rgba(8,11,16,0.85)',
-        backdropFilter: 'blur(12px)',
-      }}>
+      {/* ── Vertical Sidebar Nav — hidden on mobile ── */}
+      <nav
+        className="fixed left-0 top-0 bottom-0 z-50 hidden md:flex flex-col items-center justify-center gap-10"
+        style={{
+          width: '60px',
+          borderRight: '1px solid rgba(56,189,248,0.08)',
+          background: 'rgba(8,11,16,0.85)',
+          backdropFilter: 'blur(12px)',
+        }}
+      >
         {/* Logo */}
-        <div
+        <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          style={{
-            position: 'absolute',
-            top: '32px',
-            fontWeight: 700,
-            fontSize: '1rem',
-            color: '#f1f5f9',
-            cursor: 'pointer',
-            letterSpacing: '0.05em',
-          }}
+          className="absolute top-8 font-bold text-base tracking-wide"
+          style={{ color: 'var(--text-primary)' }}
         >
-          U<span style={{ color: '#38bdf8' }}>.</span>
-        </div>
+          U<span style={{ color: 'var(--accent)' }}>.</span>
+        </button>
 
-        {/* Nav Links — rotated */}
-        {[
-          { label: 'About', id: 'about' },
-          { label: 'Experience', id: 'experience' },
-          { label: 'Projects', id: 'projects' },
-          { label: 'Skills', id: 'skills' },
-          { label: 'Contact', id: 'contact' },
-        ].map(({ label, id }) => (
+        {/* Nav links — rotated */}
+        {navLinks.map(({ label, id }) => (
           <button
             key={id}
-            onClick={() => {
-              const el = document.getElementById(id);
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={() => scrollTo(id)}
+            className="bg-transparent border-none cursor-pointer text-[0.65rem] tracking-widest uppercase transition-colors duration-200"
             style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              fontSize: '0.65rem',
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              color: activeSection === id ? '#38bdf8' : '#475569',
+              color: activeSection === id ? 'var(--accent)' : 'var(--text-muted)',
               writingMode: 'vertical-rl',
               transform: 'rotate(180deg)',
               padding: '4px 8px',
-              transition: 'color 0.2s',
-              borderLeft: activeSection === id ? '2px solid #38bdf8' : '2px solid transparent',
+              borderRight: activeSection === id ? '2px solid var(--accent)' : '2px solid transparent',
             }}
           >
             {label}
@@ -108,172 +93,156 @@ export default function Hero() {
         {/* Email at bottom */}
         <a
           href={`mailto:${email}`}
+          className="absolute bottom-8 no-underline transition-colors duration-200 text-[0.6rem] tracking-widest hover:text-[--accent]"
           style={{
-            position: 'absolute',
-            bottom: '32px',
-            fontSize: '0.6rem',
-            color: '#334155',
-            textDecoration: 'none',
+            color: 'var(--text-faint)',
             writingMode: 'vertical-rl',
             transform: 'rotate(180deg)',
-            letterSpacing: '0.1em',
-            transition: 'color 0.2s',
           }}
-          onMouseEnter={e => (e.currentTarget.style.color = '#38bdf8')}
-          onMouseLeave={e => (e.currentTarget.style.color = '#334155')}
         >
           {email}
         </a>
       </nav>
 
-      {/* ── Scroll Progress Bar (right middle) ── */}
-      <div style={{
-        position: 'fixed',
-        right: '32px',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        width: '2px',
-        height: '120px',
-        background: '#1e293b',
-        borderRadius: '2px',
-        zIndex: 100,
-      }}>
-        <div style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: '100%',
-          borderRadius: '2px',
-          background: '#38bdf8',
-          boxShadow: '0 0 8px rgba(56,189,248,0.6)',
-          height: `${scrollProgress}%`,
-          transition: 'none',
-        }} />
+      {/* ── Mobile Hamburger ── */}
+      <div className="fixed top-0 left-0 right-0 z-50 flex md:hidden items-center justify-between px-6 py-4"
+        style={{ background: 'rgba(8,11,16,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(56,189,248,0.08)' }}
+      >
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="font-bold text-base"
+          style={{ color: 'var(--text-primary)' }}
+        >
+          U<span style={{ color: 'var(--accent)' }}>.</span>
+        </button>
+
+        {/* Hamburger icon */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="flex flex-col gap-1.5 cursor-pointer bg-transparent border-none p-1"
+        >
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
+            style={{ background: 'var(--accent)' }} />
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}
+            style={{ background: 'var(--accent)' }} />
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+            style={{ background: 'var(--accent)' }} />
+        </button>
+      </div>
+
+      {/* ── Mobile Menu Dropdown ── */}
+      {menuOpen && (
+        <div
+          className="fixed top-[57px] left-0 right-0 z-40 flex flex-col items-center gap-6 py-8 md:hidden"
+          style={{ background: 'rgba(8,11,16,0.98)', borderBottom: '1px solid rgba(56,189,248,0.08)' }}
+        >
+          {navLinks.map(({ label, id }) => (
+            <button
+              key={id}
+              onClick={() => scrollTo(id)}
+              className="bg-transparent border-none cursor-pointer text-xs tracking-widest uppercase transition-colors duration-200"
+              style={{ color: activeSection === id ? 'var(--accent)' : 'var(--text-muted)' }}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* ── Scroll Progress Bar — hidden on mobile ── */}
+      <div
+        className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden md:block"
+        style={{ width: '2px', height: '120px', background: 'var(--border)', borderRadius: '2px' }}
+      >
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            borderRadius: '2px',
+            background: 'var(--accent)',
+            boxShadow: '0 0 8px rgba(56,189,248,0.6)',
+            height: `${scrollProgress}%`,
+          }}
+        />
       </div>
 
       {/* ── Main Hero Content ── */}
-      <div style={{ flex: 1 }}>
+      <div className="flex-1 pt-20 md:pt-0">
 
-        {/* Greeting */}
-        <p style={{
-          fontSize: '0.75rem',
-          letterSpacing: '0.2em',
-          textTransform: 'uppercase',
-          color: '#38bdf8',
-          marginBottom: '20px',
-        }}>
+        <p className="label-uppercase mb-5" style={{ color: 'var(--accent)' }}>
           Hi, I'm
         </p>
 
-        {/* Name */}
-        <h1 style={{
-          fontSize: 'clamp(3rem, 7vw, 6rem)',
-          fontWeight: 800,
-          color: '#f1f5f9',
-          lineHeight: 1,
-          marginBottom: '16px',
-          letterSpacing: '-0.02em',
-        }}>
+        <h1
+          className="font-extrabold leading-none mb-4"
+          style={{
+            fontSize: 'clamp(3rem, 7vw, 6rem)',
+            color: 'var(--text-primary)',
+            letterSpacing: '-0.02em',
+          }}
+        >
           {name.split(' ')[0]}
           <br />
-          <span style={{ color: '#38bdf8' }}>{name.split(' ')[1]}</span>
+          <span style={{ color: 'var(--accent)' }}>{name.split(' ')[1]}</span>
         </h1>
 
-        {/* Title */}
-        <h2 style={{
-          fontSize: 'clamp(1rem, 2vw, 1.3rem)',
-          fontWeight: 400,
-          color: '#64748b',
-          marginBottom: '28px',
-          letterSpacing: '0.05em',
-          textTransform: 'uppercase',
-        }}>
+        <h2
+          className="font-normal uppercase mb-7"
+          style={{
+            fontSize: 'clamp(0.85rem, 2vw, 1.3rem)',
+            color: '#64748b',
+            letterSpacing: '0.05em',
+          }}
+        >
           {title}
         </h2>
 
-        {/* Tagline */}
-        <p style={{
-          fontSize: '1rem',
-          color: '#94a3b8',
-          maxWidth: '480px',
-          lineHeight: 1.8,
-          marginBottom: '48px',
-        }}>
+        <p
+          className="mb-12 leading-relaxed max-w-lg"
+          style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}
+        >
           {tagline}
         </p>
 
         {/* Buttons */}
-        <div style={{ display: 'flex', gap: '16px' }}>
+        <div className="flex flex-wrap gap-4">
           <button
-            onClick={() => {
-              const el = document.getElementById('projects');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }}
-            style={{
-              padding: '14px 32px',
-              background: '#38bdf8',
-              color: '#080b10',
-              border: 'none',
-              cursor: 'pointer',
-              fontSize: '0.75rem',
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              fontWeight: 700,
-              borderRadius: '2px',
-            }}
+            onClick={() => scrollTo('projects')}
+            className="btn-primary"
           >
             View Projects
           </button>
-          <a href={`mailto:${email}`} style={{
-            padding: '14px 32px',
-            border: '1px solid rgba(56,189,248,0.4)',
-            color: '#38bdf8',
-            textDecoration: 'none',
-            fontSize: '0.75rem',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            borderRadius: '2px',
-            display: 'inline-flex',
-            alignItems: 'center',
-          }}>
+          <a href={`mailto:${email}`} className="btn-outline">
             Contact Me
           </a>
         </div>
       </div>
 
-      {/* ── Bottom Right Stats ── */}
-      <div style={{
-        position: 'absolute',
-        bottom: '48px',
-        right: '64px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-end',
-        gap: '28px',
-      }}>
-        {[
-          { value: '4+', label: 'Years of Experience' },
-          { value: location.split(',')[1]?.trim() || 'San Jose', label: location.split(',')[0] },
-          { value: openToWork ? '✅' : '❌', label: 'Open to Work' },
-        ].map(({ value, label }) => (
-          <div key={label} style={{ textAlign: 'right' }}>
-            <p style={{
-              fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-              fontWeight: 800,
-              color: '#38bdf8',
-              lineHeight: 1,
-              marginBottom: '4px',
-            }}>
+      {/* ── Bottom Right Stats — hidden on mobile, shown on md+ ── */}
+      <div className="absolute bottom-12 right-16 hidden md:flex flex-col items-end gap-7">
+        {stats.map(({ value, label }) => (
+          <div key={label} className="text-right">
+            <p
+              className="font-extrabold leading-none mb-1"
+              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', color: 'var(--accent)' }}
+            >
               {value}
             </p>
-            <p style={{
-              fontSize: '0.75rem',
-              color: '#475569',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-            }}>
+            <p className="label-uppercase" style={{ color: 'var(--text-muted)' }}>
               {label}
             </p>
+          </div>
+        ))}
+      </div>
+
+      {/* ── Mobile Stats — vertical column on bottom right ── */}
+      <div className="absolute bottom-8 right-6 flex md:hidden flex-col items-end gap-5">
+        {stats.map(({ value, label }) => (
+          <div key={label} className="text-right">
+            <p className="font-extrabold text-lg" style={{ color: 'var(--accent)' }}>{value}</p>
+            <p className="label-uppercase text-[0.55rem]" style={{ color: 'var(--text-muted)' }}>{label}</p>
           </div>
         ))}
       </div>

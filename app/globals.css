@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
+/* ── Design Tokens ── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:        #080b10;
+  --bg-card:   rgba(255, 255, 255, 0.02);
+  --border:    #1e293b;
+  --accent:    #38bdf8;
+  --accent-dim: rgba(56, 189, 248, 0.1);
+  --accent-border: rgba(56, 189, 248, 0.3);
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #475569;
+  --text-faint:     #334155;
+  --nav-width: 60px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'DM Mono', monospace;
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── Reusable Layout ── */
+.section-base {
+  min-height: 100vh;
+  padding: 100px 48px 100px 80px;
+  background: var(--bg);
+}
+
+.section-content {
+  max-width: 900px;
+}
+
+/* ── Reusable Typography ── */
+.section-heading {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.label-uppercase {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── Reusable Card ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 28px;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent-border);
+}
+
+/* ── Reusable Button / Link ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 2px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-outline:hover { background: var(--accent-dim); }
+
+/* ── Reusable Tag / Pill ── */
+.tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.tag-muted {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+/* ── Responsive: Tablet ── */
+@media (max-width: 1024px) {
+  .section-base {
+    padding: 80px 32px 80px 80px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Responsive: Mobile ── */
+@media (max-width: 768px) {
+  .section-base {
+    padding: 80px 24px;
+  }
+
+  :root {
+    --nav-width: 0px;
+  }
 }

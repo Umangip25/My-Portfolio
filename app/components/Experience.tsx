@@ -7,132 +7,92 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      style={{
-        minHeight: '100vh',
-        padding: '100px 48px 100px 80px',
-        background: '#080b10',
-      }}
+      className="min-h-screen px-6 py-20 md:pl-20 md:pr-12 md:py-24"
+      style={{ background: 'var(--bg)' }}
     >
-      {/* Section Label */}
       <SectionBadge label="Experience" />
 
       {/* Timeline */}
-      <div style={{ maxWidth: '800px', position: 'relative' }}>
+      <div className="max-w-3xl relative mt-2">
 
         {/* Vertical line */}
-        <div style={{
-          position: 'absolute',
-          left: '0',
-          top: '8px',
-          bottom: '0',
-          width: '1px',
-          background: 'rgba(56,189,248,0.15)',
-        }} />
+        <div
+          className="absolute left-0 top-2 bottom-0 w-px"
+          style={{ background: 'rgba(56,189,248,0.15)' }}
+        />
 
         {experience.map((job, index) => (
           <div
             key={job.id}
-            style={{
-              paddingLeft: '32px',
-              paddingBottom: index === experience.length - 1 ? '0' : '56px',
-              position: 'relative',
-            }}
+            className="relative pl-8"
+            style={{ paddingBottom: index === experience.length - 1 ? '0' : '48px' }}
           >
-            {/* Dot on timeline */}
-            <div style={{
-              position: 'absolute',
-              left: '-4px',
-              top: '8px',
-              width: '9px',
-              height: '9px',
-              borderRadius: '50%',
-              background: '#38bdf8',
-              boxShadow: '0 0 8px rgba(56,189,248,0.6)',
-            }} />
+            {/* Dot */}
+            <div
+              className="absolute left-[-4px] top-2 w-2 h-2 rounded-full"
+              style={{
+                background: 'var(--accent)',
+                boxShadow: '0 0 8px rgba(56,189,248,0.6)',
+              }}
+            />
 
             {/* Duration + Type */}
-            <div style={{
-              display: 'flex',
-              gap: '12px',
-              alignItems: 'center',
-              marginBottom: '8px',
-            }}>
-              <span style={{
-                fontSize: '0.7rem',
-                letterSpacing: '0.1em',
-                color: '#38bdf8',
-                textTransform: 'uppercase',
-              }}>
+            <div className="flex flex-wrap gap-3 items-center mb-2">
+              <span
+                className="label-uppercase text-[0.65rem] md:text-[0.7rem]"
+                style={{ color: 'var(--accent)' }}
+              >
                 {job.duration}
               </span>
-              <span style={{
-                fontSize: '0.65rem',
-                color: '#475569',
-                border: '1px solid #1e293b',
-                padding: '2px 8px',
-                borderRadius: '2px',
-              }}>
+              <span
+                className="text-[0.6rem] px-2 py-0.5 rounded-sm"
+                style={{ color: 'var(--text-muted)', border: '1px solid var(--border)' }}
+              >
                 {job.type}
               </span>
             </div>
 
-            {/* Role + Company */}
-            <h3 style={{
-              fontSize: '1.1rem',
-              fontWeight: 700,
-              color: '#f1f5f9',
-              marginBottom: '4px',
-            }}>
+            {/* Role */}
+            <h3
+              className="font-bold mb-1 text-base md:text-lg"
+              style={{ color: 'var(--text-primary)' }}
+            >
               {job.role}
             </h3>
-            <p style={{
-              fontSize: '0.85rem',
-              color: '#38bdf8',
-              marginBottom: '4px',
-              fontWeight: 500,
-            }}>
+
+            {/* Company */}
+            <p
+              className="font-medium mb-1 text-sm"
+              style={{ color: 'var(--accent)' }}
+            >
               {job.company}
             </p>
-            <p style={{
-              fontSize: '0.75rem',
-              color: '#475569',
-              marginBottom: '16px',
-            }}>
+
+            {/* Location */}
+            <p
+              className="mb-4 text-xs md:text-sm"
+              style={{ color: 'var(--text-muted)' }}
+            >
               {job.location}
             </p>
 
             {/* Highlights */}
-            <ul style={{ paddingLeft: '16px', margin: 0 }}>
+            <ul className="pl-4 mb-4 space-y-1.5">
               {job.highlights.map((point, i) => (
-                <li key={i} style={{
-                  fontSize: '0.9rem',
-                  color: '#94a3b8',
-                  lineHeight: 1.7,
-                  marginBottom: '6px',
-                }}>
+                <li
+                  key={i}
+                  className="leading-relaxed text-xs md:text-sm"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
                   {point}
                 </li>
               ))}
             </ul>
 
             {/* Skill tags */}
-            <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '8px',
-              marginTop: '16px',
-            }}>
+            <div className="flex flex-wrap gap-2">
               {job.skills.map((skill) => (
-                <span key={skill} style={{
-                  fontSize: '0.65rem',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  color: '#38bdf8',
-                  background: 'rgba(56,189,248,0.08)',
-                  border: '1px solid rgba(56,189,248,0.2)',
-                  padding: '4px 10px',
-                  borderRadius: '2px',
-                }}>
+                <span key={skill} className="tag text-[0.6rem] md:text-[0.65rem]">
                   {skill}
                 </span>
               ))}

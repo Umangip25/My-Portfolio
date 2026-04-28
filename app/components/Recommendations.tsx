@@ -5,18 +5,17 @@ export default function Recommendations() {
   const { personal } = data;
 
   return (
-    <section id="recommendations" style={{ padding: '100px 48px 100px 80px', background: '#080b10' }}>
-      <div style={{ display: 'inline-block' }}>
+    <section
+      id="recommendations"
+      className="py-20 md:py-24 px-6 md:pl-20 md:pr-12"
+      style={{ background: 'var(--bg)' }}
+    >
+      <div className="inline-block">
         <SectionBadge label="Recommendations" />
       </div>
 
-      <p style={{
-        fontSize: '1rem',
-        color: '#94a3b8',
-        maxWidth: '500px',
-        lineHeight: 1.7,
-        marginBottom: '40px',
-      }}>
+      <p className="leading-relaxed mb-10 max-w-lg text-sm md:text-base"
+        style={{ color: 'var(--text-secondary)' }}>
         I have received recommendations from colleagues and managers I've worked with.
         You can read them directly on my LinkedIn profile.
       </p>
@@ -25,20 +24,7 @@ export default function Recommendations() {
         href={personal.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '10px',
-          padding: '14px 28px',
-          background: '#38bdf8',
-          borderRadius: '2px',
-          textDecoration: 'none',
-          color: '#080b10',
-          fontSize: '0.8rem',
-          letterSpacing: '0.1em',
-          textTransform: 'uppercase',
-          fontWeight: 600,
-        }}
+        className="btn-primary text-[0.7rem] md:text-[0.8rem]"
       >
         View Recommendations on LinkedIn ↗
       </a>

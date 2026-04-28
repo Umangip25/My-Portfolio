@@ -1,75 +1,65 @@
 import data from '../data/data.json';
 import SectionBadge from './SectionBadge';
 
+const contactLinks = (email: string, phone: string, linkedin: string, github: string) => [
+  { label: 'Email',    value: email,            href: `mailto:${email}` },
+  { label: 'Phone',    value: phone,             href: `tel:${phone}` },
+  { label: 'LinkedIn', value: 'umangiprajapati', href: linkedin, external: true },
+  { label: 'GitHub',   value: 'Umangip25',       href: github,   external: true },
+];
+
 export default function Contact() {
   const { email, github, linkedin, phone } = data.personal;
+  const links = contactLinks(email, phone, linkedin, github);
 
   return (
     <section
       id="contact"
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        padding: '100px 48px 100px 80px',
-        background: '#080b10',
-      }}
+      className="min-h-screen flex flex-col justify-center px-6 py-20 md:pl-20 md:pr-12 md:py-24"
+      style={{ background: 'var(--bg)' }}
     >
-      <div style={{ display: 'inline-block' }}>
+      <div className="inline-block">
         <SectionBadge label="Contact" />
       </div>
 
-      <h2 style={{
-        fontSize: 'clamp(1.5rem, 4vw, 2.8rem)',
-        fontWeight: 700,
-        color: '#f1f5f9',
-        maxWidth: '600px',
-        lineHeight: 1.2,
-        marginBottom: '16px',
-      }}>
+      <h2
+        className="font-bold leading-tight mb-4 max-w-xl"
+        style={{ fontSize: 'clamp(1.4rem, 4vw, 2.8rem)', color: 'var(--text-primary)' }}
+      >
         Let's build something great together.
       </h2>
 
-      <p style={{
-        fontSize: '1rem',
-        color: '#94a3b8',
-        maxWidth: '500px',
-        lineHeight: 1.7,
-        marginBottom: '56px',
-      }}>
+      <p className="leading-relaxed mb-12 max-w-lg text-sm md:text-base"
+        style={{ color: 'var(--text-secondary)' }}>
         I'm currently open to new opportunities. Whether you have a role,
         a project, or just want to say hi — my inbox is always open.
       </p>
 
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '16px',
-        maxWidth: '480px',
-        marginBottom: '56px',
-      }}>
-        <a href={`mailto:${email}`} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 24px', background: 'rgba(255,255,255,0.02)', border: '1px solid #1e293b', borderRadius: '4px', textDecoration: 'none' }}>
-          <span style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#475569' }}>Email</span>
-          <span style={{ fontSize: '0.9rem', color: '#38bdf8', fontWeight: 500 }}>{email} ↗</span>
-        </a>
-
-        <a href={`tel:${phone}`} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 24px', background: 'rgba(255,255,255,0.02)', border: '1px solid #1e293b', borderRadius: '4px', textDecoration: 'none' }}>
-          <span style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#475569' }}>Phone</span>
-          <span style={{ fontSize: '0.9rem', color: '#38bdf8', fontWeight: 500 }}>{phone} ↗</span>
-        </a>
-
-        <a href={linkedin} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 24px', background: 'rgba(255,255,255,0.02)', border: '1px solid #1e293b', borderRadius: '4px', textDecoration: 'none' }}>
-          <span style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#475569' }}>LinkedIn</span>
-          <span style={{ fontSize: '0.9rem', color: '#38bdf8', fontWeight: 500 }}>umangiprajapati ↗</span>
-        </a>
-
-        <a href={github} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 24px', background: 'rgba(255,255,255,0.02)', border: '1px solid #1e293b', borderRadius: '4px', textDecoration: 'none' }}>
-          <span style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#475569' }}>GitHub</span>
-          <span style={{ fontSize: '0.9rem', color: '#38bdf8', fontWeight: 500 }}>Umangip25 ↗</span>
-        </a>
+      {/* Contact cards */}
+      <div className="flex flex-col gap-4 w-full max-w-lg">
+        {links.map(({ label, value, href, external }) => (
+          <a
+            key={label}
+            href={href}
+            target={external ? '_blank' : '_self'}
+            rel="noopener noreferrer"
+            className="flex justify-between items-center px-5 py-4 md:px-6 md:py-5 rounded-sm no-underline transition-colors duration-200 hover:border-[--accent]"
+            style={{
+              background: 'var(--bg-card)',
+              border: '1px solid var(--border)',
+            }}
+          >
+            <span className="label-uppercase text-[0.65rem] md:text-[0.7rem]"
+              style={{ color: 'var(--text-muted)' }}>
+              {label}
+            </span>
+            <span className="font-medium text-sm md:text-base"
+              style={{ color: 'var(--accent)' }}>
+              {value} ↗
+            </span>
+          </a>
+        ))}
       </div>
-
     </section>
   );
 }

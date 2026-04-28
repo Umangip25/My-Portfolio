@@ -9,207 +9,140 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      style={{
-        minHeight: '100vh',
-        padding: '100px 48px 100px 80px',
-        background: '#080b10',
-      }}
+      className="min-h-screen px-6 py-20 md:pl-20 md:pr-12 md:py-24"
+      style={{ background: 'var(--bg)' }}
     >
-      {/* Section Label */}
       <SectionBadge label="Projects" />
 
-      {/* Featured Project */}
+      {/* Featured Projects */}
       {featured.map((project) => (
-        <div key={project.id} style={{
-          background: 'rgba(56,189,248,0.04)',
-          border: '1px solid rgba(56,189,248,0.15)',
-          borderRadius: '4px',
-          padding: '40px',
-          marginBottom: '48px',
-          maxWidth: '900px',
-        }}>
-          {/* Featured badge */}
-          <span style={{
-            fontSize: '0.65rem',
-            letterSpacing: '0.15em',
-            textTransform: 'uppercase',
-            color: '#38bdf8',
-            border: '1px solid rgba(56,189,248,0.3)',
-            padding: '4px 10px',
-            borderRadius: '2px',
-            marginBottom: '20px',
-            display: 'inline-block',
-          }}>
+        <div
+          key={project.id}
+          className="rounded-sm p-6 md:p-10 mb-12 max-w-4xl"
+          style={{
+            background: 'rgba(56,189,248,0.04)',
+            border: '1px solid rgba(56,189,248,0.15)',
+          }}
+        >
+          <span className="tag inline-block mb-5 text-[0.6rem] md:text-[0.65rem]">
             Featured Project
           </span>
 
-          <h3 style={{
-            fontSize: '1.4rem',
-            fontWeight: 700,
-            color: '#f1f5f9',
-            marginBottom: '16px',
-            marginTop: '12px',
-          }}>
+          <h3
+            className="font-bold mb-4 mt-3 text-lg md:text-2xl"
+            style={{ color: 'var(--text-primary)' }}
+          >
             {project.title}
           </h3>
 
-          <p style={{
-            fontSize: '0.95rem',
-            color: '#94a3b8',
-            lineHeight: 1.7,
-            marginBottom: '20px',
-            maxWidth: '600px',
-          }}>
+          <p
+            className="leading-relaxed mb-5 text-sm md:text-base max-w-2xl"
+            style={{ color: 'var(--text-secondary)' }}
+          >
             {project.description}
           </p>
 
           {/* Highlights */}
-          <ul style={{ paddingLeft: '16px', marginBottom: '24px' }}>
+          <ul className="pl-4 mb-6 space-y-1">
             {project.highlights.map((h, i) => (
-              <li key={i} style={{
-                fontSize: '0.85rem',
-                color: '#64748b',
-                lineHeight: 1.7,
-                marginBottom: '4px',
-              }}>
+              <li
+                key={i}
+                className="leading-relaxed text-xs md:text-sm"
+                style={{ color: '#64748b' }}
+              >
                 {h}
               </li>
             ))}
           </ul>
 
           {/* Tech tags */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '28px' }}>
+          <div className="flex flex-wrap gap-2 mb-7">
             {project.tech.map((t) => (
-              <span key={t} style={{
-                fontSize: '0.65rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#38bdf8',
-                background: 'rgba(56,189,248,0.08)',
-                border: '1px solid rgba(56,189,248,0.2)',
-                padding: '4px 10px',
-                borderRadius: '2px',
-              }}>
-                {t}
-              </span>
+              <span key={t} className="tag text-[0.6rem] md:text-[0.65rem]">{t}</span>
             ))}
           </div>
 
           {/* Links */}
-          <div style={{ display: 'flex', gap: '16px' }}>
+          <div className="flex flex-wrap gap-4">
             {project.live && (
-              <a href={project.live} target="_blank" rel="noopener noreferrer" style={{
-                fontSize: '0.75rem',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: '#080b10',
-                background: '#38bdf8',
-                padding: '10px 20px',
-                borderRadius: '2px',
-                textDecoration: 'none',
-                fontWeight: 600,
-              }}>
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-[0.7rem] md:text-[0.75rem] px-4 py-2.5 md:px-5 md:py-2.5"
+              >
                 Live Demo
               </a>
             )}
-            <a href={project.github} target="_blank" rel="noopener noreferrer" style={{
-              fontSize: '0.75rem',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: '#38bdf8',
-              border: '1px solid rgba(56,189,248,0.4)',
-              padding: '10px 20px',
-              borderRadius: '2px',
-              textDecoration: 'none',
-            }}>
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline text-[0.7rem] md:text-[0.75rem] px-4 py-2.5 md:px-5 md:py-2.5"
+            >
               GitHub
             </a>
           </div>
         </div>
       ))}
 
-      {/* Rest of projects grid */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-        gap: '24px',
-        maxWidth: '900px',
-      }}>
+      {/* Rest of projects — 1 col mobile, 2 col tablet, 3 col desktop */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
         {rest.map((project) => (
-          <div key={project.id} style={{
-            background: 'rgba(255,255,255,0.02)',
-            border: '1px solid #1e293b',
-            borderRadius: '4px',
-            padding: '28px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-          }}>
+          <div
+            key={project.id}
+            className="card flex flex-col justify-between"
+          >
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '16px' }}>
-                <span style={{
-                  fontSize: '0.65rem',
-                  color: '#475569',
-                  letterSpacing: '0.1em',
-                }}>
-                  {project.year}
-                </span>
-              </div>
+              <p
+                className="text-[0.6rem] tracking-widest mb-3"
+                style={{ color: 'var(--text-muted)' }}
+              >
+                {project.year}
+              </p>
 
-              <h3 style={{
-                fontSize: '1rem',
-                fontWeight: 700,
-                color: '#f1f5f9',
-                marginBottom: '12px',
-              }}>
+              <h3
+                className="font-bold mb-3 text-sm md:text-base"
+                style={{ color: 'var(--text-primary)' }}
+              >
                 {project.title}
               </h3>
 
-              <p style={{
-                fontSize: '0.85rem',
-                color: '#64748b',
-                lineHeight: 1.6,
-                marginBottom: '20px',
-              }}>
+              <p
+                className="leading-relaxed mb-5 text-xs md:text-sm"
+                style={{ color: '#64748b' }}
+              >
                 {project.description}
               </p>
             </div>
 
             {/* Tech tags */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
+            <div className="flex flex-wrap gap-1.5 mb-5">
               {project.tech.map((t) => (
-                <span key={t} style={{
-                  fontSize: '0.6rem',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  color: '#475569',
-                  border: '1px solid #1e293b',
-                  padding: '3px 8px',
-                  borderRadius: '2px',
-                }}>
-                  {t}
-                </span>
+                <span key={t} className="tag-muted text-[0.55rem] md:text-[0.6rem]">{t}</span>
               ))}
             </div>
 
             {/* Links */}
-            <div style={{ display: 'flex', gap: '12px' }}>
+            <div className="flex gap-3">
               {project.live && (
-                <a href={project.live} target="_blank" rel="noopener noreferrer" style={{
-                  fontSize: '0.7rem',
-                  color: '#38bdf8',
-                  textDecoration: 'none',
-                  letterSpacing: '0.08em',
-                }}>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[0.7rem] no-underline"
+                  style={{ color: 'var(--accent)' }}
+                >
                   Live ↗
                 </a>
               )}
-              <a href={project.github} target="_blank" rel="noopener noreferrer" style={{
-                fontSize: '0.7rem',
-                color: '#475569',
-                textDecoration: 'none',
-                letterSpacing: '0.08em',
-              }}>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[0.7rem] no-underline"
+                style={{ color: 'var(--text-muted)' }}
+              >
                 GitHub ↗
               </a>
             </div>
