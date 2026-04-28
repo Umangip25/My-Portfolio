@@ -70,14 +70,6 @@ export default function Contact() {
         </a>
       </div>
 
-      <p style={{
-        fontSize: '0.75rem',
-        color: '#334155',
-        letterSpacing: '0.1em',
-      }}>
-        Designed & Built by Umangi Prajapati · {new Date().getFullYear()}
-      </p>
-
     </section>
   );
 }
