@@ -39,8 +39,8 @@ function MarqueeRow({ items, reverse = false }: { items: string[]; reverse?: boo
           100% { transform: translateX(0); }
         }
         .marquee-track { display: flex; width: max-content; gap: 12px; }
-        .marquee-left  { animation: marquee-left  30s linear infinite; }
-        .marquee-right { animation: marquee-right 30s linear infinite; }
+        .marquee-left  { animation: marquee-left  80s linear infinite; }
+        .marquee-right { animation: marquee-right 80s linear infinite; }
         .marquee-track:hover { animation-play-state: paused; }
         .skill-pill {
           white-space: nowrap;

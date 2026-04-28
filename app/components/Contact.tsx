@@ -32,7 +32,7 @@ export default function Contact() {
       <p className="leading-relaxed mb-12 max-w-lg text-sm md:text-base"
         style={{ color: 'var(--text-secondary)' }}>
         I'm currently open to new opportunities. Whether you have a role,
-        a project, or just want to say hi — my inbox is always open.
+        a project, or just want to say hi 👋, my inbox is always open.
       </p>
 
       {/* Contact cards */}

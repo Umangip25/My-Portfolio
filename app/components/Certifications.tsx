@@ -105,7 +105,7 @@ export default function Certifications() {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="cert-link btn-outline self-start text-[0.65rem] md:text-[0.7rem] px-3 py-2"
+              className="cert-link btn-outline self-start text-[0.65rem] md:text-[0.7rem] px-3 py-2 whitespace-nowrap rounded-sm"
             >
               View Certificate ↗
             </a>

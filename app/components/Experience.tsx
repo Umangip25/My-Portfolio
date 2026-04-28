@@ -44,6 +44,12 @@ export default function Experience() {
               >
                 {job.duration}
               </span>
+               <span
+                className="label-uppercase text-[0.65rem] md:text-[0.7rem]"
+                style={{ color: 'var(--accent)' }}
+              >
+                {job.totalDuration}
+              </span>
               <span
                 className="text-[0.6rem] px-2 py-0.5 rounded-sm"
                 style={{ color: 'var(--text-muted)', border: '1px solid var(--border)' }}

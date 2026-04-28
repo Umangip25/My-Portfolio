@@ -1,9 +1,9 @@
 {
   "personal": {
     "name": "Umangi Prajapati",
-    "title": "Frontend Software Engineer",
-    "tagline": "I build frontend experiences that are fast, accessible, and scale well.",
-    "bio": "Frontend Software Engineer with 4+ years of experience building scalable, high-performance web applications using React.js, Next.js, and TypeScript. Proven track record of improving performance by 15–30% through SSR, lazy loading, and code splitting. Hands-on experience integrating AI/LLM APIs into production applications. Passionate about building seamless, responsive user experiences from Figma to deployment.",
+    "title": "Senior Frontend Developer",
+    "tagline": "Building scalable, high-performance web experiences with React, Next.js and AEM Cloud.",
+    "bio": "Frontend Developer with 4.5+ years of experience building scalable, high-performance web applications using React.js, Next.js, and AEM Cloud. Skilled in implementing server-side rendering (SSR), lazy loading, and optimizing page performance. Proficient in developing reusable UI components, optimizing APIs, and creating responsive, accessible interfaces that enhance user experience.",
     "location": "San Jose, California, United States",
     "email": "umangip96@gmail.com",
     "phone": "+1 7605717758",
@@ -11,25 +11,54 @@
     "linkedin": "https://www.linkedin.com/in/umangiprajapati/",
     "portfolio": "https://umangi-prajapati-yvxedph.gamma.site/",
     "openToWork": true,
-    "pronouns": "She/Her"
+    "pronouns": "She/Her",
+    "languages": [
+      {
+        "language": "English",
+        "proficiency": "Full Professional Proficiency"
+      },
+      {
+        "language": "Hindi",
+        "proficiency": "Full Professional Proficiency"
+      },
+      {
+        "language": "Gujarati",
+        "proficiency": "Native or Bilingual Proficiency"
+      }
+    ]
   },
   "experience": [
     {
       "id": 1,
       "company": "Optum",
-      "role": "Software Developer",
+      "role": "Senior Frontend Developer",
       "type": "Contract",
       "duration": "May 2023 – Present",
+      "totalDuration": "2 years 8 months",
       "location": "San Jose, CA · Remote",
+      "summary": "Grew from Software Developer to Senior Software Developer, deeply involved in frontend development using React, Next.js, TypeScript, Tailwind CSS, and GraphQL. Focused on building scalable UI components, improving performance through SSR, and contributing to a smooth developer workflow.",
       "highlights": [
-        "Led frontend development for HR Admin Experience and Provider Search (PSX-LAWW) using React, Next.js, Tailwind CSS, and AEM Cloud",
-        "Improved page load times by 15% via SSR, lazy loading, caching, and code splitting; boosted user engagement by 30%",
-        "Integrated RESTful and GraphQL APIs for dynamic state management across patient-facing and admin modules",
-        "Migrated legacy UI to AEM Cloud, reducing CMS update cycles by 25% and technical debt by 20%",
-        "Introduced Playwright, Jest, and Enzyme pipelines increasing test coverage by 60% and reducing production bugs by 40%",
-        "Ensured WCAG accessibility compliance and mentored junior developers, accelerating onboarding by 50%"
+        "Refactored and modularized legacy code, reducing technical debt by 20% and improving maintainability",
+        "Built and maintained scalable UI components using Next.js and AEM Cloud",
+        "Improved page load times by 15% through server-side rendering (SSR), lazy loading, and caching strategies",
+        "Collaborated with cross-functional teams, ensuring 100% on-time delivery of projects",
+        "Conducted code reviews, mentored junior developers, and enforced best practices to uphold high code quality",
+        "Implemented Playwright for robust end-to-end testing, enhancing application stability and reliability",
+        "Integrated GraphQL APIs to optimize data fetching",
+        "Managed complex AEM Cloud integrations, streamlining content workflows and dynamic user experiences",
+        "Enhanced CI/CD pipelines using Git"
       ],
-      "skills": ["React", "Next.js", "TypeScript", "Tailwind CSS", "AEM Cloud", "GraphQL", "Playwright", "Jest"]
+      "skills": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "AEM Cloud",
+        "GraphQL",
+        "Playwright",
+        "Jest",
+        "CI/CD"
+      ]
     },
     {
       "id": 2,
@@ -37,14 +66,25 @@
       "role": "Software Developer",
       "type": "Contract",
       "duration": "Sep 2022 – May 2023",
-      "location": "San Jose, CA · Remote",
+      "totalDuration": "9 months",
+      "location": "Addison, TX · Remote",
+      "summary": "",
       "highlights": [
-        "Developed enterprise banking web apps using React.js, JavaScript, HTML5, CSS3, and Redux",
-        "Built 10+ reusable UI components reducing development time by 20%",
-        "Integrated REST APIs with microservices teams ensuring WCAG accessibility compliance",
-        "Delivered features in Agile sprints using Jira/Rally with CI/CD via Git and Jenkins"
+        "Developed and maintained enterprise banking web applications using React.js, JavaScript, HTML5, CSS3, and Redux",
+        "Built reusable UI components and improved frontend consistency across multiple workflows",
+        "Integrated REST APIs and collaborated with microservices teams to enhance performance and data reliability",
+        "Enhanced UI performance and accessibility while following enterprise security and compliance requirements",
+        "Worked in Agile sprints using Jira/Rally and supported CI/CD pipelines with Git, GitHub, and Jenkins"
       ],
-      "skills": ["React.js", "Redux", "REST APIs", "JavaScript", "Jenkins", "CI/CD"]
+      "skills": [
+        "React.js",
+        "Redux",
+        "REST APIs",
+        "JavaScript",
+        "Jenkins",
+        "CI/CD",
+        "Agile"
+      ]
     },
     {
       "id": 3,
@@ -52,13 +92,21 @@
       "role": "Junior Full Stack Developer",
       "type": "Full-time",
       "duration": "Feb 2022 – May 2022",
+      "totalDuration": "4 months",
       "location": "Herndon, VA",
+      "summary": "",
       "highlights": [
-        "Built responsive SPAs using React.js and Tailwind CSS, improving UI responsiveness by 20%",
-        "Implemented Context API for scalable state management",
-        "Wrote unit tests using Jest and Enzyme, improving code coverage and reliability"
+        "Built SPAs using ReactJS and Tailwind CSS, enhancing UI responsiveness by 20%",
+        "Integrated Context API for state management, improving global data synchronization",
+        "Improved client satisfaction by 95% by collaborating with UX teams to refine the user experience"
       ],
-      "skills": ["React.js", "Tailwind CSS", "Context API", "Jest", "Enzyme"]
+      "skills": [
+        "React.js",
+        "Tailwind CSS",
+        "Context API",
+        "Jest",
+        "Enzyme"
+      ]
     },
     {
       "id": 4,
@@ -66,26 +114,45 @@
       "role": "UI React Developer Trainee",
       "type": "Full-time",
       "duration": "Jul 2021 – Feb 2022",
-      "location": "Edison, NJ · Remote",
+      "totalDuration": "8 months",
+      "location": "New Jersey · Remote",
+      "summary": "",
       "highlights": [
-        "Built reusable React components following DRY principles, reducing development time by 20%",
-        "Translated wireframes into functional UIs using JavaScript ES6+, Node.js, and Webpack",
-        "Delivered 5 project modules on schedule in Agile teams"
+        "Developed responsive user interfaces using React.js, ensuring cross-browser compatibility",
+        "Implemented frontend logic with Redux, maintaining clean and efficient code",
+        "Collaborated with UX/UI designers to translate design mockups into functional components",
+        "Created wireframes and transformed them into reusable UI components using React.js"
       ],
-      "skills": ["React.js", "JavaScript ES6+", "Node.js", "Webpack", "Agile"]
+      "skills": [
+        "React.js",
+        "JavaScript ES6+",
+        "Redux",
+        "Webpack",
+        "Agile"
+      ]
     },
     {
       "id": 5,
       "company": "i3 Infotech",
-      "role": "Web Developer Intern",
+      "role": "Web Developer",
       "type": "Internship",
-      "duration": "Aug 2017 – May 2018",
+      "duration": "Aug 2017 – Apr 2018",
+      "totalDuration": "9 months",
       "location": "Surat, Gujarat, India · On-site",
+      "summary": "",
       "highlights": [
-        "Built responsive interfaces using HTML, CSS, JavaScript, and React following mobile-first principles",
-        "Implemented reusable React components, forms, routing, and basic animations"
+        "Worked on React JS framework to develop Single Page Applications",
+        "Collaborated with stakeholders to deliver website updates and progress reports",
+        "Implemented stable React components and stand-alone functions for future pages",
+        "Ensured web application responsiveness using Bootstrap and CSS Media Queries"
       ],
-      "skills": ["HTML", "CSS", "JavaScript", "React"]
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Bootstrap"
+      ]
     }
   ],
   "projects": [
@@ -100,7 +167,15 @@
         "Mobile-responsive UI with light/dark theme toggle",
         "KaTeX math rendering and hydration-safe SSR components"
       ],
-      "tech": ["Next.js", "TypeScript", "OpenAI API", "Zustand", "Tailwind CSS", "IndexedDB", "Dexie.js"],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "OpenAI API",
+        "Zustand",
+        "Tailwind CSS",
+        "IndexedDB",
+        "Dexie.js"
+      ],
       "live": "https://ai-chat-bot-theta-rust.vercel.app/",
       "github": "https://github.com/Umangip25",
       "featured": true,
@@ -115,7 +190,12 @@
         "Page hit and exit page report modules",
         "Calculates user interaction patterns and session behavior"
       ],
-      "tech": ["C#", "SQL Server", "Visual Studio", "Node.js"],
+      "tech": [
+        "C#",
+        "SQL Server",
+        "Visual Studio",
+        "Node.js"
+      ],
       "live": null,
       "github": "https://github.com/Umangip25",
       "featured": false,
@@ -131,7 +211,12 @@
         "Grooming session locator for male and female dogs",
         "Login and registration flow with 3 main modules"
       ],
-      "tech": ["Flutter", "Dart", "XML", "Android Studio"],
+      "tech": [
+        "Flutter",
+        "Dart",
+        "XML",
+        "Android Studio"
+      ],
       "live": null,
       "github": "https://github.com/Umangip25",
       "featured": false,
@@ -147,7 +232,15 @@
         "Bootstrap and CSS Media Queries for full responsiveness",
         "PHP + MySQL backend with XAMPP server"
       ],
-      "tech": ["React.js", "Bootstrap", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "tech": [
+        "React.js",
+        "Bootstrap",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL"
+      ],
       "live": null,
       "github": "https://github.com/Umangip25",
       "featured": false,
@@ -162,7 +255,15 @@
         "Displays relevant items based on visual matching",
         "ReactJS SPA with PHP/MySQL backend"
       ],
-      "tech": ["React.js", "Bootstrap", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "tech": [
+        "React.js",
+        "Bootstrap",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL"
+      ],
       "live": null,
       "github": "https://github.com/Umangip25",
       "featured": false,
@@ -177,7 +278,11 @@
         "Biometric login for returning users",
         "Android native implementation"
       ],
-      "tech": ["Android Studio", "Android", "XML"],
+      "tech": [
+        "Android Studio",
+        "Android",
+        "XML"
+      ],
       "live": null,
       "github": "https://github.com/Umangip25",
       "featured": false,
@@ -192,7 +297,10 @@
         "Secure voter registration and authentication",
         "Basic but accessible UI built with C# and Visual Studio"
       ],
-      "tech": ["C#", "Visual Studio"],
+      "tech": [
+        "C#",
+        "Visual Studio"
+      ],
       "live": null,
       "github": "https://github.com/Umangip25",
       "featured": false,
@@ -200,118 +308,175 @@
     }
   ],
   "skills": {
-    "languages": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "C#", "Dart"],
-    "frameworks": ["React.js", "Next.js", "Redux", "Context API", "Zustand", "Node.js", "Flutter"],
-    "styling": ["Tailwind CSS", "Styled Components", "Responsive Design", "Bootstrap"],
-    "testing": ["Jest", "Enzyme", "Playwright"],
-    "tools": ["Git", "NPM", "Webpack", "Babel", "Jenkins", "Jira", "Figma", "Vercel"],
-    "cms": ["Adobe Experience Manager (AEM Cloud)"],
-    "apis": ["REST APIs", "GraphQL", "OpenAI API"],
-    "performance": ["SSR", "Lazy Loading", "Code Splitting", "Caching"],
-    "other": ["Web Accessibility (WCAG)", "CI/CD", "Agile/Scrum", "XSS Prevention", "DOM Manipulation", "IndexedDB (Dexie.js)"]
+    "languages": [
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Python",
+      "C#",
+      "Dart"
+    ],
+    "frameworks": [
+      "React.js",
+      "Next.js",
+      "Redux",
+      "Context API",
+      "React Router",
+      "React Hooks",
+      "Node.js",
+      "Flutter"
+    ],
+    "styling": [
+      "Tailwind CSS",
+      "Styled Components",
+      "Bootstrap",
+      "Responsive Design",
+      "CSS3"
+    ],
+    "testing": [
+      "Jest",
+      "Enzyme",
+      "Playwright",
+      "Unit Testing"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "NPM",
+      "Webpack",
+      "Babel",
+      "Jenkins",
+      "Jira",
+      "Figma",
+      "Vercel"
+    ],
+    "cms": [
+      "Adobe Experience Manager (AEM Cloud)"
+    ],
+    "apis": [
+      "REST APIs",
+      "GraphQL",
+      "OpenAI API"
+    ],
+    "performance": [
+      "SSR",
+      "CSR",
+      "Lazy Loading",
+      "Code Splitting",
+      "Caching Strategies"
+    ],
+    "other": [
+      "Web Accessibility (WCAG)",
+      "CI/CD",
+      "Agile/Scrum",
+      "DOM Manipulation",
+      "IndexedDB (Dexie.js)",
+      "XSS Prevention"
+    ]
   },
   "education": [
     {
       "degree": "Master's in Computer Science",
       "institution": "California State University San Marcos",
-      "location": "USA",
+      "location": "San Marcos, CA, USA",
       "gpa": "3.4/4.0",
-      "year": "May 2021"
+      "year": "2019 – 2021"
     },
     {
-      "degree": "Bachelor's in Computer Science & Engineering",
+      "degree": "Bachelor's in Computer Engineering",
       "institution": "Gujarat Technological University",
       "location": "Gujarat, India",
       "gpa": "7.76/10",
-      "year": "June 2018"
+      "year": "Aug 2014 – May 2018"
     }
   ],
   "certifications": [
-  {
-    "title": "Hands-On AI: Build an AI Chatbot with GPT-4o and Next.js",
-    "issuer": "LinkedIn",
-    "year": "2026",
-    "description": "Covers building a production-ready AI chat app with Next.js and OpenAI GPT models, including conversation threading, message persistence, and real-time streaming responses.",
-    "link": "https://www.linkedin.com/learning/certificates/47713723f7d6b4b1ebd5a383bd703ed3765a2db712513a6c9d5fa92e3507bdc1"
-  },
-  {
-    "title": "Integrating Generative AI into JavaScript Web Projects",
-    "issuer": "LinkedIn",
-    "year": "2026",
-    "description": "Teaches how to integrate OpenAI APIs into JavaScript web apps, covering chat completions, function calling, and building AI-powered virtual assistants.",
-    "link": "https://www.linkedin.com/learning/certificates/906673795f15be06080a45421f7a7c10bdb4f10bd0a07b5408ef5b5dae9bd03b"
-  },
-  {
-    "title": "What is GenAI",
-    "issuer": "LinkedIn",
-    "year": "2026",
-    "description": "An introductory course explaining what Generative AI is, how it differs from traditional machine learning, and how it creates new content like text, images, and code.",
-    "link": "https://www.linkedin.com/learning/certificates/1d21c47aac8e127cb4feb6715be4db8529dc93a2fd0c17b178681ce79c017361"
-  },
-  {
-    "title": "CSS Certificate",
-    "issuer": "HackerRank",
-    "year": "2026",
-    "description": "Validates proficiency in CSS fundamentals including cascading and inheritance, text styling, layout techniques, and the box model.",
-    "link": "https://www.hackerrank.com/certificates/0cffbb098760"
-  },
-  {
-    "title": "JavaScript (Intermediate) Certificate",
-    "issuer": "HackerRank",
-    "year": "2026",
-    "description": "Assesses knowledge of advanced JavaScript concepts including design patterns, memory management, concurrency models, and event loops.",
-    "link": "https://www.hackerrank.com/certificates/a4db5436d7ed"
-  },
-  {
-    "title": "Software Engineer Certificate",
-    "issuer": "HackerRank",
-    "year": "2026",
-    "description": "A role-based certification validating proficiency in problem-solving, SQL, and REST APIs — core skills expected of software engineers.",
-    "link": "https://www.hackerrank.com/certificates/4f803d47206b"
-  },
-  {
-    "title": "REST API Certificate",
-    "issuer": "HackerRank",
-    "year": "2026",
-    "description": "Covers retrieving and processing data from APIs using parameters and pagination, validating hands-on REST API integration skills.",
-    "link": "https://www.hackerrank.com/certificates/b520824f18d2"
-  },
-  {
-    "title": "React JS Certificate",
-    "issuer": "HackerRank",
-    "year": "2026",
-    "description": "Validates React skills including basic routing, rendering elements, state management, event handling, ES6 syntax, and form validation.",
-    "link": "https://www.hackerrank.com/certificates/ba39cd8adba7"
-  },
-  {
-    "title": "JavaScript Specialist Certification",
-    "issuer": "HackerRank",
-    "year": "2026",
-    "description": "An advanced JavaScript certification covering functions, hoisting, scope, inheritance, events, error handling, and core language concepts.",
-    "link": "https://www.hackerrank.com/certificates/dfa4ec9a7d4e"
-  },
-  {
-    "title": "Frontend Developer (React) Certificate",
-    "issuer": "HackerRank",
-    "year": "2026",
-    "description": "A role-based certification covering React, JavaScript, and CSS — validating the complete skill set expected of a frontend developer.",
-    "link": "https://www.hackerrank.com/certificates/047da75efe55"
-  },
-  {
-    "title": "Front End Web Development",
-    "issuer": "Johns Hopkins University (Coursera)",
-    "year": "2021",
-    "description": "Covers building responsive, interactive websites using HTML5, CSS3, and JavaScript, including responsive design, Ajax, and DOM manipulation.",
-    "link": "https://coursera.org/share/1725954c3d40eb0ba6e3932fab88cf28"
-  },
-  {
-    "title": "Using Python to Access Web Data",
-    "issuer": " University of Michigan (Coursera)",
-    "year": "2020",
-    "description": "Focuses on accessing and processing web data using Python, including API integration, JSON/XML parsing, and web scraping techniques.",
-    "link": "https://coursera.org/share/548ead6309cf18d1e0a94be214482413"
-  }
-],
+    {
+      "title": "Hands-On AI: Build an AI Chatbot with GPT-4o and Next.js",
+      "issuer": "LinkedIn",
+      "year": "2026",
+      "description": "Covers building a production-ready AI chat app with Next.js and OpenAI GPT models, including conversation threading, message persistence, and real-time streaming responses.",
+      "link": "https://www.linkedin.com/learning/certificates/47713723f7d6b4b1ebd5a383bd703ed3765a2db712513a6c9d5fa92e3507bdc1"
+    },
+    {
+      "title": "Integrating Generative AI into JavaScript Web Projects",
+      "issuer": "LinkedIn",
+      "year": "2026",
+      "description": "Teaches how to integrate OpenAI APIs into JavaScript web apps, covering chat completions, function calling, and building AI-powered virtual assistants.",
+      "link": "https://www.linkedin.com/learning/certificates/906673795f15be06080a45421f7a7c10bdb4f10bd0a07b5408ef5b5dae9bd03b"
+    },
+    {
+      "title": "What is GenAI",
+      "issuer": "LinkedIn",
+      "year": "2026",
+      "description": "An introductory course explaining what Generative AI is, how it differs from traditional machine learning, and how it creates new content like text, images, and code.",
+      "link": "https://www.linkedin.com/learning/certificates/1d21c47aac8e127cb4feb6715be4db8529dc93a2fd0c17b178681ce79c017361"
+    },
+    {
+      "title": "CSS Certificate",
+      "issuer": "HackerRank",
+      "year": "2026",
+      "description": "Validates proficiency in CSS fundamentals including cascading and inheritance, text styling, layout techniques, and the box model.",
+      "link": "https://www.hackerrank.com/certificates/0cffbb098760"
+    },
+    {
+      "title": "JavaScript (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "year": "2026",
+      "description": "Assesses knowledge of advanced JavaScript concepts including design patterns, memory management, concurrency models, and event loops.",
+      "link": "https://www.hackerrank.com/certificates/a4db5436d7ed"
+    },
+    {
+      "title": "Software Engineer Certificate",
+      "issuer": "HackerRank",
+      "year": "2026",
+      "description": "A role-based certification validating proficiency in problem-solving, SQL, and REST APIs — core skills expected of software engineers.",
+      "link": "https://www.hackerrank.com/certificates/4f803d47206b"
+    },
+    {
+      "title": "REST API Certificate",
+      "issuer": "HackerRank",
+      "year": "2026",
+      "description": "Covers retrieving and processing data from APIs using parameters and pagination, validating hands-on REST API integration skills.",
+      "link": "https://www.hackerrank.com/certificates/b520824f18d2"
+    },
+    {
+      "title": "React JS Certificate",
+      "issuer": "HackerRank",
+      "year": "2026",
+      "description": "Validates React skills including basic routing, rendering elements, state management, event handling, ES6 syntax, and form validation.",
+      "link": "https://www.hackerrank.com/certificates/ba39cd8adba7"
+    },
+    {
+      "title": "JavaScript Specialist Certification",
+      "issuer": "HackerRank",
+      "year": "2026",
+      "description": "An advanced JavaScript certification covering functions, hoisting, scope, inheritance, events, error handling, and core language concepts.",
+      "link": "https://www.hackerrank.com/certificates/dfa4ec9a7d4e"
+    },
+    {
+      "title": "Frontend Developer (React) Certificate",
+      "issuer": "HackerRank",
+      "year": "2026",
+      "description": "A role-based certification covering React, JavaScript, and CSS — validating the complete skill set expected of a frontend developer.",
+      "link": "https://www.hackerrank.com/certificates/047da75efe55"
+    },
+    {
+      "title": "Front End Web Development",
+      "issuer": "Johns Hopkins University (Coursera)",
+      "year": "2021",
+      "description": "Covers building responsive, interactive websites using HTML5, CSS3, and JavaScript, including responsive design, Ajax, and DOM manipulation.",
+      "link": "https://coursera.org/share/1725954c3d40eb0ba6e3932fab88cf28"
+    },
+    {
+      "title": "Using Python to Access Web Data",
+      "issuer": " University of Michigan (Coursera)",
+      "year": "2020",
+      "description": "Focuses on accessing and processing web data using Python, including API integration, JSON/XML parsing, and web scraping techniques.",
+      "link": "https://coursera.org/share/548ead6309cf18d1e0a94be214482413"
+    }
+  ],
   "recommendations": [
     {
       "name": "Skandh Gupta",
