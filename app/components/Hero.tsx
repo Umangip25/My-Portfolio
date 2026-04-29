@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import data from '../data/data.json';
 import { useActiveSection } from '../hooks/useActiveSection';
+import Image from 'next/image';
 
 const navLinks = [
   { label: 'About', id: 'about' },
@@ -169,7 +170,39 @@ export default function Hero() {
       </div>
 
       {/* ── Main Hero Content ── */}
-      <div className="flex-1 pt-20 md:pt-0">
+      <div className="flex-1 md:pt-0">
+
+        {/* Mobile Profile Image — shown above name on mobile only */}
+        <div className="flex md:hidden justify-end mb-8 mt-4">
+          <div className="relative">
+            <div
+              className="absolute inset-0 rounded-full"
+              style={{
+                background: 'conic-gradient(from 0deg, transparent 0deg, transparent 300deg, #38bdf8 330deg, #7dd3fc 360deg)',
+                animation: 'rotateBorder 3s linear infinite',
+                borderRadius: '50%',
+                padding: '2px',
+              }}
+            />
+            <div
+              className="relative rounded-full overflow-hidden"
+              style={{
+                width: '180px',
+                height: '180px',
+                border: '3px solid rgba(56,189,248,0.3)',
+                boxShadow: '0 0 30px rgba(56,189,248,0.15)',
+              }}
+            >
+              <Image
+                src="https://drive.google.com/uc?export=view&id=1FXpx5qsaJBoZrNrWahXrfZZr6LzVkpmr"
+                alt="Umangi Prajapati"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              />
+            </div>
+          </div>
+        </div>
+
 
         <p className="label-uppercase mb-5" style={{ color: 'var(--accent)' }}>
           Hi, I'm
@@ -207,7 +240,7 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 md:pb-0 pb-28">
           <button
             onClick={() => scrollTo('projects')}
             className="btn-primary"
@@ -221,34 +254,85 @@ export default function Hero() {
             View Resume
           </a>
         </div>
-      </div>
 
-      {/* ── Bottom Right Stats — hidden on mobile, shown on md+ ── */}
-      <div className="absolute bottom-12 right-16 hidden md:flex flex-col items-end gap-7">
-        {stats.map(({ value, label }) => (
-          <div key={label} className="text-right">
-            <p
-              className="font-extrabold leading-none mb-1"
-              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', color: 'var(--accent)' }}
-            >
-              {value}
-            </p>
-            <p className="label-uppercase" style={{ color: 'var(--text-muted)' }}>
-              {label}
-            </p>
+        {/* ── Mobile Stats — shown below buttons on mobile only ── */}
+        <div className="absolute bottom-8 right-6 flex md:hidden flex-col items-end gap-5 ">
+          {stats.map(({ value, label }) => (
+            <div key={label} className="text-right">
+              <p className="font-extrabold text-lg" style={{ color: 'var(--accent)' }}>{value}</p>
+              <p className="label-uppercase text-[0.55rem]" style={{ color: 'var(--text-muted)' }}>{label}</p>
+            </div>
+          ))}
+        </div> 
+
+
+      </div>
+      {/* ── Right Side — Image + Stats ── */}
+      <div className="hidden md:flex flex-col items-end justify-between absolute right-16 top-24 bottom-12 pr-14">
+
+        {/* Profile Image — top */}
+        <div className="relative">
+          <div
+            className="absolute inset-0 rounded-full"
+            style={{
+              background: 'conic-gradient(from 0deg, transparent 0deg, transparent 300deg, #38bdf8 330deg, #7dd3fc 360deg)',
+              animation: 'rotateBorder 3s linear infinite',
+              borderRadius: '50%',
+              padding: '2px',
+            }}
+          />
+          <style>{`
+            @keyframes rotateBorder {
+              from { transform: rotate(0deg); }
+              to   { transform: rotate(360deg); }
+            }
+          `}</style>
+
+          <div
+            className="relative rounded-full overflow-hidden"
+            style={{
+              width: '380px',
+              height: '380px',
+              border: '3px solid rgba(56,189,248,0.3)',
+              boxShadow: '0 0 40px rgba(56,189,248,0.15)',
+            }}
+          >
+            <Image
+              src="https://drive.google.com/uc?export=view&id=1FXpx5qsaJBoZrNrWahXrfZZr6LzVkpmr"
+              alt="Umangi Prajapati"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center top' }}
+            />
           </div>
-        ))}
+        </div>
+
+        {/* Stats — bottom */}
+        <div className="flex flex-col items-end gap-7">
+          {stats.map(({ value, label }) => (
+            <div key={label} className="text-right">
+              <p
+                className="font-extrabold leading-none mb-1"
+                style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', color: 'var(--accent)' }}
+              >
+                {value}
+              </p>
+              <p className="label-uppercase" style={{ color: 'var(--text-muted)' }}>
+                {label}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* ── Mobile Stats — vertical column on bottom right ── */}
-      <div className="absolute bottom-8 right-6 flex md:hidden flex-col items-end gap-5">
+      {/* <div className="absolute bottom-8 right-6 flex md:hidden flex-col items-end gap-5">
         {stats.map(({ value, label }) => (
           <div key={label} className="text-right">
             <p className="font-extrabold text-lg" style={{ color: 'var(--accent)' }}>{value}</p>
             <p className="label-uppercase text-[0.55rem]" style={{ color: 'var(--text-muted)' }}>{label}</p>
           </div>
         ))}
-      </div>
+      </div> */}
 
     </section>
   );
