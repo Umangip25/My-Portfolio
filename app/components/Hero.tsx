@@ -170,7 +170,7 @@ export default function Hero() {
       </div>
 
       {/* ── Main Hero Content ── */}
-      <div className="flex-1 md:pt-0">
+      <div className="flex-1 pt-3 md:pt-0">
 
         {/* Mobile Profile Image — shown above name on mobile only */}
         <div className="flex md:hidden justify-end mb-8 mt-4">
@@ -240,7 +240,7 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-wrap gap-4 md:pb-0 pb-28">
+        <div className="flex flex-wrap gap-4 md:pb-0 pb-30">
           <button
             onClick={() => scrollTo('projects')}
             className="btn-primary"
