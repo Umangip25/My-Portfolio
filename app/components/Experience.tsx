@@ -7,7 +7,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen px-6 py-20 md:pl-20 md:pr-12 md:py-24"
+      className="lg:min-h-screen px-6 py-20 md:pl-20 md:pr-12 md:py-24"
       style={{ background: 'var(--bg)' }}
     >
       <SectionBadge label="Experience" />

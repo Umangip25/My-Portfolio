@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col justify-center px-6 py-20 md:pl-20 md:pr-12 md:py-24"
+      className="lg:min-h-screen flex flex-col justify-center px-6 py-20 md:pl-20 md:pr-12 md:py-24"
       style={{ background: 'var(--bg)' }}
     >
       <div className="inline-block">

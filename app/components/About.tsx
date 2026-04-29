@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center px-6 py-20 md:pl-20 md:pr-12 md:py-24"
+      className="lg:min-h-screen flex items-center px-6 py-20 md:pl-20 md:pr-12 md:py-24"
       style={{ background: 'var(--bg)' }}
     >
       <div className="max-w-3xl w-full">
