@@ -7,7 +7,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="min-h-screen px-6 py-20 md:pl-20 md:pr-12 md:py-24"
+      className="md:min-h-screen px-6 py-20 md:pl-20 md:pr-12 md:py-24"
       style={{ background: 'var(--bg)' }}
     >
       <SectionBadge label="Education" />
