@@ -11,19 +11,39 @@ import Education from "./components/Education";
 import Footer from "./components/Footer";
 
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Umangi Prajapati',
+    url: 'https://umangi.dev',
+    jobTitle: 'Frontend Developer',
+    email: 'umangip96@gmail.com',
+    sameAs: [
+      'https://github.com/umangi',      // ← update with real URLs
+      'https://linkedin.com/in/umangi',
+    ],
+    knowsAbout: ['React', 'Next.js', 'TypeScript', 'Frontend Development'],
+  };
+
   return (
-    <main>
-      <NavBar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Certifications />
-      <Recommendations />
-      <Education />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main>
+        <NavBar />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Certifications />
+        <Recommendations />
+        <Education />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   );
 }
