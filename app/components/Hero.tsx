@@ -217,6 +217,9 @@ export default function Hero() {
           <a href={`mailto:${email}`} className="btn-outline">
             Contact Me
           </a>
+          <a href="https://drive.google.com/file/d/1cymDFS2r96U7AaO7LjDpECn_1XPQQQWJ/view" className="btn-outline" target="_blank" rel="noopener noreferrer">
+            View Resume
+          </a>
         </div>
       </div>
 
