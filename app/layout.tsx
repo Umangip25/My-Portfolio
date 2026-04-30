@@ -16,13 +16,13 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://umangi.dev'), // ← change to your real domain
+  metadataBase: new URL('https://umangip.vercel.app'),
   title: {
     default: 'Umangi Prajapati — Frontend Developer',
     template: '%s | Umangi Prajapati',
   },
   description:
-    'Frontend Developer skilled in React, Next.js, TypeScript & UI/UX. Building fast, beautiful web experiences.',
+    'Frontend Developer skilled in React, Next.js & TypeScript — building fast, beautiful web experiences for modern products.',
   keywords: [
     'Umangi Prajapati',
     'Frontend Developer',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://umangi.dev',
+    url: 'https://umangip.vercel.app',
     title: 'Umangi Prajapati — Frontend Developer',
     description: 'Building fast, beautiful web experiences with React & Next.js.',
     siteName: 'Umangi Prajapati Portfolio',

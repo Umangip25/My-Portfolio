@@ -121,6 +121,7 @@ export default function Hero() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="flex flex-col gap-1.5 cursor-pointer bg-transparent border-none p-1"
+          aria-label="Open menu"
         >
           <span className={`block w-6 h-0.5 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
             style={{ background: 'var(--accent)' }} />
@@ -143,6 +144,7 @@ export default function Hero() {
               onClick={() => scrollTo(id)}
               className="bg-transparent border-none cursor-pointer text-xs tracking-widest uppercase transition-colors duration-200"
               style={{ color: activeSection === id ? 'var(--accent)' : 'var(--text-muted)' }}
+              aria-label={label}
             >
               {label}
             </button>
@@ -197,6 +199,9 @@ export default function Hero() {
                 src="https://drive.google.com/uc?export=view&id=1FXpx5qsaJBoZrNrWahXrfZZr6LzVkpmr"
                 alt="Umangi Prajapati"
                 fill
+                priority
+                loading="eager"
+                sizes="(max-width: 768px) 180px, (max-width: 1024px) 280px, 380px"
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
               />
             </div>
@@ -301,6 +306,9 @@ export default function Hero() {
               src="https://drive.google.com/uc?export=view&id=1FXpx5qsaJBoZrNrWahXrfZZr6LzVkpmr"
               alt="Umangi Prajapati"
               fill
+              priority
+              loading="eager"
+              sizes="(max-width: 768px) 180px, (max-width: 1024px) 280px, 380px"
               style={{ objectFit: 'cover', objectPosition: 'center top' }}
             />
           </div>
@@ -323,16 +331,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-
-      {/* ── Mobile Stats — vertical column on bottom right ── */}
-      {/* <div className="absolute bottom-8 right-6 flex md:hidden flex-col items-end gap-5">
-        {stats.map(({ value, label }) => (
-          <div key={label} className="text-right">
-            <p className="font-extrabold text-lg" style={{ color: 'var(--accent)' }}>{value}</p>
-            <p className="label-uppercase text-[0.55rem]" style={{ color: 'var(--text-muted)' }}>{label}</p>
-          </div>
-        ))}
-      </div> */}
 
     </section>
   );
