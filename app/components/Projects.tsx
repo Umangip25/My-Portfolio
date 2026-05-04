@@ -15,10 +15,11 @@ export default function Projects() {
       <SectionBadge label="Projects" />
 
       {/* Featured Projects */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {featured.map((project) => (
         <div
           key={project.id}
-          className="rounded-sm p-6 md:p-10 mb-12 max-w-4xl"
+          className="rounded-sm p-6 md:p-10 md:mb-12 max-w-4xl mb-0"
           style={{
             background: 'rgba(56,189,248,0.04)',
             border: '1px solid rgba(56,189,248,0.15)',
@@ -85,9 +86,10 @@ export default function Projects() {
           </div>
         </div>
       ))}
+      </div>
 
       {/* Rest of projects — 1 col mobile, 2 col tablet, 3 col desktop */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {rest.map((project) => (
           <div
             key={project.id}

@@ -183,6 +183,35 @@
     },
     {
       "id": 2,
+      "title": "RoleFit AI — Resume Alignment Tool",
+      "description": "AI-powered resume tailoring tool that aligns resumes with job descriptions while enforcing strict no-fabrication rules. Built with Next.js App Router and OpenAI GPT-4o for intelligent rewriting, keyword matching, and ATS optimization.",
+      "highlights": [
+        "Upload resume (.docx) or paste text with intelligent parsing using Mammoth",
+        "AI-powered rewriting with strict no-fabrication constraints",
+        "Keyword matching system highlighting matched and missing skills",
+        "Alignment scoring with before vs after comparison",
+        "Multiple focus modes: ATS Optimized, Impact Focused, Balanced, Concise",
+        "DOCX export with formatted output using docx + file-saver",
+        "Session persistence using sessionStorage",
+        "Responsive UI with dark/light mode and multi-step workflow UX"
+      ],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "OpenAI API",
+        "Tailwind CSS",
+        "Mammoth.js",
+        "docx",
+        "Vercel",
+        "React"
+      ],
+      "live": "https://rolefit-resume.vercel.app/",
+      "github": "https://github.com/Umangip25/rolefit-ai",
+      "featured": true,
+      "year": "2026"
+    },
+    {
+      "id": 3,
       "title": "User Behavior Prediction — Web Log Mining",
       "description": "A predictive analytics application built to forecast future item sales based on historical data, page hit reports, and exit page tracking.",
       "highlights": [
@@ -202,7 +231,7 @@
       "year": "2021"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Dogmates — Flutter App",
       "description": "A mobile application for dog owners covering breed information, event listings, veterinary clinic locations, accessories shopping, and grooming session locators.",
       "highlights": [
@@ -223,7 +252,7 @@
       "year": "2020"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "North County Climate Change Alliance — Website",
       "description": "A nonprofit event-management website built for the North County Climate Change Alliance.",
       "highlights": [
@@ -247,7 +276,7 @@
       "year": "2019"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Cloud Marketing with Image Processing",
       "description": "An online shopping platform using image processing to intelligently filter and surface products.",
       "highlights": [
@@ -270,7 +299,7 @@
       "year": "2018"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Face Recognition & Password Authentication",
       "description": "An Android app providing biometric security using facial recognition as a login password.",
       "highlights": [
@@ -289,7 +318,7 @@
       "year": "2017"
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Online Voting System",
       "description": "A digital voting application allowing citizens to vote for their preferred political party from anywhere.",
       "highlights": [

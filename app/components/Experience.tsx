@@ -13,7 +13,7 @@ export default function Experience() {
       <SectionBadge label="Experience" />
 
       {/* Timeline */}
-      <div className="max-w-3xl relative mt-2">
+      <div className="max-w-4xl relative mt-2">
 
         {/* Vertical line */}
         <div
