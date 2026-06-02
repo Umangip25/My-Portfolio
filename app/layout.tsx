@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Syne, DM_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const syne = Syne({
   variable: "--font-syne",
@@ -66,6 +67,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
