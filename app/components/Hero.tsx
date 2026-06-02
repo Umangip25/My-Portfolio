@@ -252,9 +252,9 @@ export default function Hero() {
           >
             View Projects
           </button>
-          <a href={`mailto:${email}`} className="btn-outline">
+          <button onClick={() => scrollTo('contact')} className="btn-outline">
             Contact Me
-          </a>
+          </button>
           <a href="https://drive.google.com/file/d/1hLxSETD5rTItwomW4FDh1HxgrDZhyyIA/view" className="btn-outline" target="_blank" rel="noopener noreferrer">
             View Resume
           </a>
