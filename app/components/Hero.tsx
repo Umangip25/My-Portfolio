@@ -196,7 +196,7 @@ export default function Hero() {
               }}
             >
               <Image
-                src="https://drive.google.com/uc?export=view&id=1FXpx5qsaJBoZrNrWahXrfZZr6LzVkpmr"
+                src="/profile.jpeg"
                 alt="Umangi Prajapati"
                 fill
                 priority
@@ -303,7 +303,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="https://drive.google.com/uc?export=view&id=1FXpx5qsaJBoZrNrWahXrfZZr6LzVkpmr"
+              src="/profile.jpeg"
               alt="Umangi Prajapati"
               fill
               priority
