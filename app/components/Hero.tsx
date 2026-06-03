@@ -196,7 +196,7 @@ export default function Hero() {
               }}
             >
               <Image
-                src="https://bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com/profile"
+                src="https://bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com/profile.jpeg"
                 alt="Umangi Prajapati"
                 fill
                 priority
@@ -303,7 +303,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="https://bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com/profile"
+              src="https://bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com/profile.jpeg"
               alt="Umangi Prajapati"
               fill
               priority
