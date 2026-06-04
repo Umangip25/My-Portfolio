@@ -138,3 +138,18 @@ body {
     --nav-width: 0px;
   }
 }
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(56,189,248,0.2);
+    border-color: rgba(56,189,248,0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(56,189,248,0.6);
+    border-color: rgba(56,189,248,0.8);
+  }
+}
+
+.hero-image-glow {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}

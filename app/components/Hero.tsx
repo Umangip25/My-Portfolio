@@ -64,7 +64,6 @@ export default function Hero() {
           backdropFilter: 'blur(12px)',
         }}
       >
-        {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="absolute top-8 font-bold text-base tracking-wide"
@@ -73,7 +72,6 @@ export default function Hero() {
           U<span style={{ color: 'var(--accent)' }}>.</span>
         </button>
 
-        {/* Nav links — rotated */}
         {navLinks.map(({ label, id }) => (
           <button
             key={id}
@@ -91,7 +89,6 @@ export default function Hero() {
           </button>
         ))}
 
-        {/* Email at bottom */}
         <a
           href={`mailto:${email}`}
           className="absolute bottom-8 no-underline transition-colors duration-200 text-[0.6rem] tracking-widest hover:text-[--accent]"
@@ -106,7 +103,8 @@ export default function Hero() {
       </nav>
 
       {/* ── Mobile Hamburger ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex md:hidden items-center justify-between px-6 py-4"
+      <div
+        className="fixed top-0 left-0 right-0 z-50 flex md:hidden items-center justify-between px-6 py-4"
         style={{ background: 'rgba(8,11,16,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(56,189,248,0.08)' }}
       >
         <button
@@ -117,7 +115,6 @@ export default function Hero() {
           U<span style={{ color: 'var(--accent)' }}>.</span>
         </button>
 
-        {/* Hamburger icon */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="flex flex-col gap-1.5 cursor-pointer bg-transparent border-none p-1"
@@ -152,7 +149,7 @@ export default function Hero() {
         </div>
       )}
 
-      {/* ── Scroll Progress Bar — hidden on mobile ── */}
+      {/* ── Scroll Progress Bar ── */}
       <div
         className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden md:block"
         style={{ width: '2px', height: '120px', background: 'var(--border)', borderRadius: '2px' }}
@@ -172,42 +169,30 @@ export default function Hero() {
       </div>
 
       {/* ── Main Hero Content ── */}
-      <div className="flex-1 pt-3 md:pt-0">
+      <div className="flex-1">
 
-        {/* Mobile Profile Image — shown above name on mobile only */}
-        <div className="flex md:hidden justify-end mb-8 mt-4">
-          <div className="relative">
-            <div
-              className="absolute inset-0 rounded-full"
-              style={{
-                background: 'conic-gradient(from 0deg, transparent 0deg, transparent 300deg, #38bdf8 330deg, #7dd3fc 360deg)',
-                animation: 'rotateBorder 3s linear infinite',
-                borderRadius: '50%',
-                padding: '2px',
-              }}
+        {/* Mobile Profile Image */}
+        <div className="flex md:hidden justify-end mb-8">
+          <div
+            className="relative rounded-full overflow-hidden hero-image-glow"
+            style={{
+              width: '180px',
+              height: '180px',
+              border: '3px solid rgba(56,189,248,0.3)',
+              flexShrink: 0,
+            }}
+          >
+            <Image
+              src="https://bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com/profile.jpeg"
+              alt="Umangi Prajapati"
+              fill
+              priority
+              loading="eager"
+              sizes="160px"
+              style={{ objectFit: 'cover', objectPosition: 'center top' }}
             />
-            <div
-              className="relative rounded-full overflow-hidden"
-              style={{
-                width: '180px',
-                height: '180px',
-                border: '3px solid rgba(56,189,248,0.3)',
-                boxShadow: '0 0 30px rgba(56,189,248,0.15)',
-              }}
-            >
-              <Image
-                src="https://bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com/profile.jpeg"
-                alt="Umangi Prajapati"
-                fill
-                priority
-                loading="eager"
-                sizes="(max-width: 768px) 180px, (max-width: 1024px) 280px, 380px"
-                style={{ objectFit: 'cover', objectPosition: 'center top' }}
-              />
-            </div>
           </div>
         </div>
-
 
         <p className="label-uppercase mb-5" style={{ color: 'var(--accent)' }}>
           Hi, I'm
@@ -246,22 +231,24 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 md:pb-0 pb-30">
-          <button
-            onClick={() => scrollTo('projects')}
-            className="btn-primary"
-          >
+          <button onClick={() => scrollTo('projects')} className="btn-primary">
             View Projects
           </button>
           <button onClick={() => scrollTo('contact')} className="btn-outline">
             Contact Me
           </button>
-          <a href="https://drive.google.com/file/d/1hLxSETD5rTItwomW4FDh1HxgrDZhyyIA/view" className="btn-outline" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://drive.google.com/file/d/1hLxSETD5rTItwomW4FDh1HxgrDZhyyIA/view"
+            className="btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             View Resume
           </a>
         </div>
 
-        {/* ── Mobile Stats — shown below buttons on mobile only ── */}
-        <div className="absolute bottom-8 right-6 flex md:hidden flex-col items-end gap-5 ">
+        {/* Mobile Stats */}
+        <div className="absolute bottom-8 right-6 flex md:hidden flex-col items-end gap-5">
           {stats.map(({ value, label }) => (
             <div key={label} className="text-right">
               <p className="font-extrabold text-lg" style={{ color: 'var(--accent)' }}>{value}</p>
@@ -270,51 +257,34 @@ export default function Hero() {
           ))}
         </div> 
 
-
       </div>
-      {/* ── Right Side — Image + Stats ── */}
+      {/* ── end flex-1 ── */}
+
+      {/* ── Right Side — Desktop Image + Stats ── */}
       <div className="hidden md:flex flex-col items-end justify-between absolute right-16 top-24 bottom-12 pr-14">
 
-        {/* Profile Image — top */}
-        <div className="relative">
-          <div
-            className="absolute inset-0 rounded-full"
-            style={{
-              background: 'conic-gradient(from 0deg, transparent 0deg, transparent 300deg, #38bdf8 330deg, #7dd3fc 360deg)',
-              animation: 'rotateBorder 3s linear infinite',
-              borderRadius: '50%',
-              padding: '2px',
-            }}
+        {/* Profile Image */}
+        <div
+          className="relative rounded-full overflow-hidden hero-image-glow"
+          style={{
+            width: '380px',
+            height: '380px',
+            border: '3px solid rgba(56,189,248,0.3)',
+            flexShrink: 0,
+          }}
+        >
+          <Image
+            src="https://bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com/profile.jpeg"
+            alt="Umangi Prajapati"
+            fill
+            priority
+            loading="eager"
+            sizes="(max-width: 1024px) 280px, 380px"
+            style={{ objectFit: 'cover', objectPosition: 'center top' }}
           />
-          <style>{`
-            @keyframes rotateBorder {
-              from { transform: rotate(0deg); }
-              to   { transform: rotate(360deg); }
-            }
-          `}</style>
-
-          <div
-            className="relative rounded-full overflow-hidden"
-            style={{
-              width: '380px',
-              height: '380px',
-              border: '3px solid rgba(56,189,248,0.3)',
-              boxShadow: '0 0 40px rgba(56,189,248,0.15)',
-            }}
-          >
-            <Image
-              src="https://bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com/profile.jpeg"
-              alt="Umangi Prajapati"
-              fill
-              priority
-              loading="eager"
-              sizes="(max-width: 768px) 180px, (max-width: 1024px) 280px, 380px"
-              style={{ objectFit: 'cover', objectPosition: 'center top' }}
-            />
-          </div>
         </div>
 
-        {/* Stats — bottom */}
+        {/* Stats */}
         <div className="flex flex-col items-end gap-7">
           {stats.map(({ value, label }) => (
             <div key={label} className="text-right">
@@ -330,6 +300,7 @@ export default function Hero() {
             </div>
           ))}
         </div>
+
       </div>
 
     </section>
