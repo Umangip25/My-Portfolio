@@ -187,6 +187,7 @@ export default function Hero() {
               alt="Umangi Prajapati"
               fill
               priority
+              quality={90}
               loading="eager"
               sizes="160px"
               style={{ objectFit: 'cover', objectPosition: 'center top' }}
@@ -278,6 +279,7 @@ export default function Hero() {
             alt="Umangi Prajapati"
             fill
             priority
+            quality={90}
             loading="eager"
             sizes="(max-width: 1024px) 280px, 380px"
             style={{ objectFit: 'cover', objectPosition: 'center top' }}

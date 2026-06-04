@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'bvm6kdaf4jhy5dhu.public.blob.vercel-storage.com' },
     ],
     formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
   },
   async rewrites() {
     return [
