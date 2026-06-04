@@ -153,3 +153,7 @@ body {
 .hero-image-glow {
   animation: glowPulse 2.5s ease-in-out infinite;
 }
+
+.glow-badge {
+  animation: glowPulse 2s ease-in-out infinite;
+}
