@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   experimental: {
-    optimizePackageImports: ['@vercel/analytics'],
+    optimizePackageImports: ['@vercel/analytics', '@vercel/speed-insights'],
   },
   images: {
     remotePatterns: [
