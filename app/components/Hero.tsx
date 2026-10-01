@@ -42,7 +42,7 @@ export default function Hero() {
   };
 
   const stats = [
-    { value: '4.5+', label: 'Years of Experience' },
+    { value: '5+', label: 'Years of Experience' },
     { value: location.split(',')[1]?.trim() || 'San Jose', label: location.split(',')[0] },
     { value: openToWork ? '✅' : '❌', label: 'Open to Work' },
   ];
