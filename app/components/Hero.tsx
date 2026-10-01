@@ -239,7 +239,7 @@ export default function Hero() {
             Contact Me
           </button>
           <a
-            href="https://drive.google.com/file/d/1hLxSETD5rTItwomW4FDh1HxgrDZhyyIA/view"
+            href="https://drive.google.com/file/d/1LzeQVZH7zMJq4nzphu1_wsqe49e23pCB/view"
             className="btn-outline"
             target="_blank"
             rel="noopener noreferrer"
